@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv) {
   if (argc == 1) {
-    std::cerr << "ERROR no input: please input a[] and x";
+    std::cerr << "ERROR no input: please input a[] and x" << "\n";
     return 0;
   }
   double x = atof(argv[argc - 1]);
