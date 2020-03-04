@@ -1,19 +1,22 @@
-//
-// Created by yww on 3/3/20.
-//
+/**
+ * @file main.cpp
+ * @author Wuwei YUAN
+ * @date 3/4/2020
+ */
 
 #include <cstdlib>
 #include "func.h"
-#include <cstdio>
 #include <iostream>
 #include <iomanip>
 #include "timer.h"
 
 int main(int argc, char **argv) {
+  // If there is no input, report an error
   if (argc == 1) {
     std::cerr << "ERROR no input: please input a[] and x" << "\n";
     return 0;
   }
+  // Process input
   double x = atof(argv[argc - 1]);
   int n = argc - 2;
   auto *a = new double[n];
@@ -22,7 +25,7 @@ int main(int argc, char **argv) {
   }
 
   std::cout << std::fixed << std::setprecision(2);
-  // compute result
+  // Compute result
   std::cout << "result of polynomial by brute force algorithm is " <<
          BruteForceComputePolynomialFunction(a, n, x) << "\n";
   std::cout << "result of polynomial by QINGJiuShao's algorithm is " <<
@@ -32,7 +35,7 @@ int main(int argc, char **argv) {
   std::cout << "result of posynomial by QINGJiuShao's algorithm is " <<
          QingjiushaosComputePosynomialFunction(a, n, x) << "\n";
 
-  // timing
+  // Time and output
   const int times = 100000000;
   double brute_force_runtime, QINGJiuShaos_runtime, improvement;
   Timer timer{};

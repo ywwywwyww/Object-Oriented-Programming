@@ -1,6 +1,8 @@
-//
-// Created by yww on 3/3/20.
-//
+/**
+ * @file timer.h
+ * @author Wuwei YUAN
+ * @date 3/4/2020
+ */
 
 #ifndef PROBLEM1_TIMER_H
 #define PROBLEM1_TIMER_H
@@ -8,20 +10,25 @@
 #include <sys/time.h>
 
 /**
- * a timer
+ * A class that can helps you measuring time
+ * Example:
+ *    Timer timer{};
+ *    timer.Start();
+ *    Sleep(1000);
+ *    std::cout << "time elapsed: " << timer.Stop() << "s\n";
  */
 class Timer {
 
  public:
   /**
-   * start timing
+   * Starts timing
    */
   void Start() {
     start_time_ = GetTimeOfDay();
   }
 
   /**
-   * stop timing
+   * Stops timing
    * @return time elapsed by second
    */
   double Stop() {
@@ -31,8 +38,8 @@ class Timer {
 
  private:
   /**
-    * get time of day
-    * @return time of day
+    * Gets time of day
+    * @return Time of day
     */
   static double GetTimeOfDay() {
     timeval current_time;

@@ -1,23 +1,25 @@
-//
-// Created by yww on 3/3/20.
-//
+/**
+ * @file reviewer_assigner.cpp
+ * @author Wuwei YUAN
+ * @date 3/4/2020
+ */
 
 #include "reviewer_assigner.h"
 
 #include <fstream>
 #include <cstring>
 #include <cstdlib>
-#include <ctime>
 #include <set>
 #include <iostream>
 
 void ReviewerAssigner::load(const std::string &list_filename) {
   std::ifstream fin{list_filename};
+  // If the specified file doesn't exists, report an error
   if (!fin) {
     std::cerr <<"ERROR file does no exit: " << list_filename << "\n";
     return;
   }
-  const int kMaxLength = 100;
+  const int kMaxLength = 100; // Max length of a line
   char line[kMaxLength];
   fin.getline(line, kMaxLength);
   while (fin) {
@@ -35,15 +37,15 @@ void ReviewerAssigner::load(const std::string &list_filename) {
 
 void ReviewerAssigner::choose(const int &num_reviewer_for_each_student) {
   num_reviewers_for_each_student_ = num_reviewer_for_each_student;
-  srand(time(NULL));
   int num_students = students_.size();
   for (int i = 0; i < num_students; i++) {
     assignment_result_.emplace_back();
-    std::set<int> assigned;
+    std::set<int> assigned; // Use a set to maintaining assigned reviewers
     assigned.insert(i);
     for (int j = 0; j < num_reviewer_for_each_student; j++) {
       int reviewer;
       do {
+        // Randomgly choose a student
         reviewer = rand() % num_students;
       } while (assigned.count(reviewer) != 0);
       assignment_result_[i].push_back(reviewer);
