@@ -36,7 +36,7 @@ double QingjiushaosComputePolynomialFunction(const double *a, const int &n, cons
 double BruteForceComputePosynomialFunction(const double *a, const int &n, const double &x);
 
 /**
- * Compute posynomial function by QINGJiuShao's algorithm
+ * Computes posynomial function by QINGJiuShao's algorithm
  * @param a The coefficients
  * @param n The degree of posynomial
  * @param x The value of independent variable
