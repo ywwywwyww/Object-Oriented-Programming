@@ -4,8 +4,8 @@
  * @date 3/4/2020
  */
 
-#ifndef PROBLEM1_TIMER_H
-#define PROBLEM1_TIMER_H
+#ifndef PROBLEM3_TIMER_H
+#define PROBLEM3_TIMER_H
 
 #include <sys/time.h>
 
@@ -53,4 +53,4 @@ class Timer {
 
 };
 
-#endif //PROBLEM1_TIMER_H
+#endif //PROBLEM3_TIMER_H
