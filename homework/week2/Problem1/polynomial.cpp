@@ -10,7 +10,7 @@
 double BruteForceComputePolynomialFunction(const double *a, const int &n, const double &x) {
   double result = 0;
   for (int i = 0; i < n; i++) {
-    // Computing x^i
+    // Compute x^i
     double x_i = 1;
     for (int j = 1; j <= i; j++) {
       x_i *= x;
