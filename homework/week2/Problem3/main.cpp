@@ -25,21 +25,11 @@ int main(int argc, char **argv) {
   int n = atoi(argv[1]);
   std::vector<int> data = Sorter::GenerateRandomPermutation(n);
 
-  // Sort
-  Timer timer{};
-  std::vector<int> input = data;
-  timer.Start();
-  Sorter::BubbleSort(input, 0, n);
-  double bubble_sort_time = timer.Stop();
-  input = data;
-  timer.Start();
-  Sorter::SelectionSort(input, 0, n);
-  double selection_sort_time = timer.Stop();
-  input = data;
-  timer.Start();
-  Sorter::QuickSort(input, 0, n);
-  double quick_sort_time = timer.Stop();
-  // Check whether bubble_sort_time is too small to avoid divide-by-zero error
+  // Test
+  double bubble_sort_time = Sorter::Test(&Sorter::BubbleSort, data);
+  double selection_sort_time = Sorter::Test(&Sorter::SelectionSort, data);
+  double quick_sort_time = Sorter::Test(&Sorter::QuickSort, data);
+  // Check whether baseline_time is too small to avoid divide-by-zero error
   double baseline_time = std::max({bubble_sort_time, selection_sort_time, quick_sort_time});
   double bubble_sort_improvement = (baseline_time < 1e-9? 0 : (baseline_time - bubble_sort_time) / baseline_time);
   double selection_sort_improvement = (baseline_time < 1e-9 ? 0 : (baseline_time - selection_sort_time) / baseline_time);

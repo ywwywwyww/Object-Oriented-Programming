@@ -8,6 +8,7 @@
 #include <vector>
 #include "sorter.h"
 #include <algorithm>
+#include "timer.h"
 
 /**
  * @ref https://appdividend.com/2019/05/02/quick-sort-in-c-tutorial-with-example-c-quick-sort-program/
@@ -70,4 +71,11 @@ std::vector<int> Sorter::GenerateRandomPermutation(int length) {
     std::swap(result[rand() % (i + 1)], result[i]);
   }
   return result;
+}
+
+double Sorter::Test(void (*sort_function)(std::vector<int>&, int, int), std::vector<int> input) {
+  Timer timer{};
+  timer.Start();
+  sort_function(input, 0, input.size());
+  return timer.Stop();
 }

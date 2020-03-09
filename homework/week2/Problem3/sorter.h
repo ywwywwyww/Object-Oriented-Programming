@@ -41,6 +41,8 @@ class Sorter {
    * @return The generated random permutation
    */
   static std::vector<int> GenerateRandomPermutation(int length);
+
+  static double Test(void (*sort_function)(std::vector<int>&, int, int), std::vector<int> data);
 };
 
 #endif //PROBLEM3__SORTER_H_
