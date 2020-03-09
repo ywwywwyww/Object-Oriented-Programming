@@ -11,7 +11,7 @@
 
 double BruteForceComputePosynomialFunction(const double *a, const int &n, const double &x) {
   if (fabs(x) < 1e-9) {
-    std::cerr << "ERROR illegal input: x is zero\n";
+    std::cerr << "ERROR illegal input: x is zero" << std::endl;
     return nan("");
   }
   double inverse_x = 1 / x;
@@ -29,7 +29,7 @@ double BruteForceComputePosynomialFunction(const double *a, const int &n, const 
 
 double QingjiushaosComputePosynomialFunction(const double *a, const int &n, const double &x) {
   if (fabs(x) < 1e-9) {
-    std::cerr << "ERROR illegal input: x is zero\n";
+    std::cerr << "ERROR illegal input: x is zero" << std::endl;
     return nan("");
   }
   double inverse_x = 1 / x; // Inverse of x

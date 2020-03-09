@@ -16,7 +16,7 @@ void ReviewerAssigner::load(const std::string &list_filename) {
   std::ifstream fin{list_filename};
   // If the specified file doesn't exists, report an error
   if (!fin) {
-    std::cerr <<"ERROR file does no exit: " << list_filename << "\n";
+    std::cerr <<"ERROR file does no exit: " << list_filename << std::endl;
     return;
   }
   const int kMaxLength = 100; // Max length of a line

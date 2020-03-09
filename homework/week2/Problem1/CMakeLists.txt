@@ -3,4 +3,4 @@ project(Problem1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Problem1 timer.h func.h posynomial.cpp polynomial.cpp main.cpp)
+add_executable(Problem1 timer.h func.h posynomial.cpp polynomial.cpp main.cpp timer.cpp)

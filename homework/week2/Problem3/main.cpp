@@ -11,37 +11,45 @@
 #include <iostream>
 #include "timer.h"
 #include <iomanip>
+#include <algorithm>
 
-int main() {
+int main(int argc, char **argv) {
+  if (argc != 2) {
+    std::cerr << "Usage: ./Problem3 <length of tested permutation>" << std::endl;
+    return -1;
+  }
   // Set random seed
   srand(time(NULL));
 
   // Generate random array
-  int n = 10000;
-  static int a[1000000], b[1000000], c[1000000];
-  for (int i = 0; i < n; i++) {
-    a[i] = b[i] = c[i] = rand();
-  }
+  int n = atoi(argv[1]);
+  std::vector<int> data = Sorter::GenerateRandomPermutation(n);
 
   // Sort
   Timer timer{};
+  std::vector<int> input = data;
   timer.Start();
-  Sorter::BubbleSort(a, 0, n - 1);
+  Sorter::BubbleSort(input, 0, n);
   double bubble_sort_time = timer.Stop();
+  input = data;
   timer.Start();
-  Sorter::MergeSort(b, 0, n - 1);
-  double merge_sort_time = timer.Stop();
+  Sorter::SelectionSort(input, 0, n);
+  double selection_sort_time = timer.Stop();
+  input = data;
   timer.Start();
-  Sorter::QuickSort(c, 0, n - 1);
+  Sorter::QuickSort(input, 0, n);
   double quick_sort_time = timer.Stop();
   // Check whether bubble_sort_time is too small to avoid divide-by-zero error
-  double merge_sort_improvement = (bubble_sort_time < 1e-9 ? 0 : (bubble_sort_time - merge_sort_time) / bubble_sort_time);
-  double quick_sort_improvement = (bubble_sort_time < 1e-9 ? 0 : (bubble_sort_time - quick_sort_time) / bubble_sort_time);
+  double baseline_time = std::max({bubble_sort_time, selection_sort_time, quick_sort_time});
+  double bubble_sort_improvement = (baseline_time < 1e-9? 0 : (baseline_time - bubble_sort_time) / baseline_time);
+  double selection_sort_improvement = (baseline_time < 1e-9 ? 0 : (baseline_time - selection_sort_time) / baseline_time);
+  double quick_sort_improvement = (baseline_time < 1e-9 ? 0 : (baseline_time - quick_sort_time) / baseline_time);
 
   // Output
   std::cout << std::fixed << std::setprecision(2);
-  std::cout << "bubble sort: " << bubble_sort_time << "s\n";
-  std::cout << "merge sort: " << merge_sort_time << "s  improvement: " << merge_sort_improvement * 100 << "%\n";
-  std::cout << "quick sort: " << quick_sort_time << "s  improvement: " << quick_sort_improvement * 100 << "%\n";
+  std::cout << "baseline: " << baseline_time << "s" << std::endl;
+  std::cout << "bubble sort: " << bubble_sort_time << "s improvement: " << bubble_sort_improvement * 100 << "%" << std::endl;
+  std::cout << "selection sort: " << selection_sort_time << "s  improvement: " << selection_sort_improvement * 100 << "%" << std::endl;
+  std::cout << "quick sort: " << quick_sort_time << "s  improvement: " << quick_sort_improvement * 100 << "%" << std::endl;
   return 0;
 }

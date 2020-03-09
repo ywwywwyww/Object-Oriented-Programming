@@ -7,6 +7,8 @@
 #ifndef PROBLEM3__SORTER_H_
 #define PROBLEM3__SORTER_H_
 
+#include <vector>
+
 /**
  * A sorter contains three different sorting algorithms
  * Example:
@@ -16,26 +18,29 @@
 class Sorter {
  public:
   /**
-   * Sorts elements in the range [l,r] of a array in ascending order using quick sort
-   * @param a The pointer to the array
-   * @param l The left endpoint
-   * @param r The right endpoint
+   * Sorts elements in the range [l, r) of a vector in ascending order using quick sort
+   * @param a The vector
+   * @param l, r The range of elements to sort
    */
-  static void QuickSort(int* a, int l, int r);
+  static void QuickSort(std::vector<int> &a, int l, int r);
   /**
-   * Sorts elements in the range [l,r] of a array in ascending order using merge sort
-   * @param a The pointer to the array
-   * @param l The left endpoint
-   * @param r The right endpoint
+   * Sorts elements in the range [l, r) of a vector in ascending order using selection sort
+   * @param a The vector
+   * @param l, r The range of elements to sort
    */
-  static void MergeSort(int* a, int l, int r);
+  static void SelectionSort(std::vector<int> &a, int l, int r);
   /**
-   * Sorts elements in the range [l,r] of a array in ascending order using bubble sort
-   * @param a The pointer to the array
-   * @param l The left endpoint
-   * @param r The right endpoint
+   * Sorts elements in the range [l, r) of a vector in ascending order using bubble sort
+   * @param a The vector
+   * @param l, r The range of elements to sort
    */
-  static void BubbleSort(int *a, int l, int r);
+  static void BubbleSort(std::vector<int> &a, int l, int r);
+  /**
+   * Generates a random permutation
+   * @param length The length of permutation
+   * @return The generated random permutation
+   */
+  static std::vector<int> GenerateRandomPermutation(int length);
 };
 
 #endif //PROBLEM3__SORTER_H_

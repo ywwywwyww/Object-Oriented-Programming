@@ -78,6 +78,9 @@
 		<Unit filename="/home/yww/OOP/homework/week2/Problem1/posynomial.cpp">
 			<Option target="Problem1"/>
 		</Unit>
+		<Unit filename="/home/yww/OOP/homework/week2/Problem1/timer.cpp">
+			<Option target="Problem1"/>
+		</Unit>
 		<Unit filename="/home/yww/OOP/homework/week2/Problem1/timer.h">
 			<Option target="Problem1"/>
 		</Unit>
