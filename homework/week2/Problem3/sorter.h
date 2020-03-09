@@ -41,7 +41,12 @@ class Sorter {
    * @return The generated random permutation
    */
   static std::vector<int> GenerateRandomPermutation(int length);
-
+  /**
+   * Tests the given sort function using given data
+   * @param sort_function The sort function
+   * @param data The data to be tested
+   * @return Time elapsed in seconds
+   */
   static double Test(void (*sort_function)(std::vector<int>&, int, int), std::vector<int> data);
 };
 

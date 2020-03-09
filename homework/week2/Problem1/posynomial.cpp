@@ -9,11 +9,12 @@
 #include <iostream>
 #include "func.h"
 
-double BruteForceComputePosynomialFunction(const double *a, const int &n, const double &x) {
+double BruteForceComputePosynomialFunction(const std::vector<double> &a, const double &x) {
   if (fabs(x) < 1e-9) {
     std::cerr << "ERROR illegal input: x is zero" << std::endl;
     return nan("");
   }
+  int n = a.size();
   double inverse_x = 1 / x;
   double result = 0;
   for (int i = 0; i < n; i++) {
@@ -27,11 +28,12 @@ double BruteForceComputePosynomialFunction(const double *a, const int &n, const 
   return result;
 }
 
-double QingjiushaosComputePosynomialFunction(const double *a, const int &n, const double &x) {
+double QingjiushaosComputePosynomialFunction(const std::vector<double> &a, const double &x) {
   if (fabs(x) < 1e-9) {
     std::cerr << "ERROR illegal input: x is zero" << std::endl;
     return nan("");
   }
+  int n = a.size();
   double inverse_x = 1 / x; // Inverse of x
   double result = 0;
   for (int i = n - 1; i >= 0; i--) {

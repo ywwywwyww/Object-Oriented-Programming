@@ -8,40 +8,38 @@
 #ifndef PROBLEM1_FUNC_H
 #define PROBLEM1_FUNC_H
 
+#include <vector>
+
 /**
  * Computes polynomial function by brute force algorithm
  * @param a The coefficients
- * @param n The degree of polynomial
  * @param x The value of independent variable
  * @return The value of polynomial
  */
-double BruteForceComputePolynomialFunction(const double *a, const int &n, const double &x);
+double BruteForceComputePolynomialFunction(const std::vector<double> &a, const double &x);
 
 /**
  * Computes polynomial function by QINGJiuShao's algorithm
  * @param a The coefficients
- * @param n The degree of polynomial
  * @param x The value of independent variable
  * @return The value of polynomial
  */
-double QingjiushaosComputePolynomialFunction(const double *a, const int &n, const double &x);
+double QingjiushaosComputePolynomialFunction(const std::vector<double> &a, const double &x);
 
 /**
  * Computes posynomial function by brute force algorithm
  * @param a The coefficients
- * @param n The degree of posynomial
  * @param x The value of independent variable
  * @return The value of posynomial
  */
-double BruteForceComputePosynomialFunction(const double *a, const int &n, const double &x);
+double BruteForceComputePosynomialFunction(const std::vector<double> &a, const double &x);
 
 /**
  * Computes posynomial function by QINGJiuShao's algorithm
  * @param a The coefficients
- * @param n The degree of posynomial
  * @param x The value of independent variable
  * @return The value of posynomial
  */
-double QingjiushaosComputePosynomialFunction(const double *a, const int &n, const double &x);
+double QingjiushaosComputePosynomialFunction(const std::vector<double> &a, const double &x);
 
 #endif //PROBLEM1_FUNC_H

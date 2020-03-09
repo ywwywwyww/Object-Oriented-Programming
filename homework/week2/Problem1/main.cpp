@@ -9,6 +9,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <vector>
 #include "timer.h"
 
 int main(int argc, char **argv) {
@@ -20,9 +21,9 @@ int main(int argc, char **argv) {
   // Process input
   double x = atof(argv[argc - 1]);
   int n = argc - 2;
-  auto *a = new double[n];
+  std::vector<double> a;
   for (int i = 0; i < n; i++) {
-    a[i] = atof(argv[i + 1]);
+    a.push_back(atof(argv[i + 1]));
   }
 
   if (fabs(x) < 1e-9) {
@@ -33,13 +34,13 @@ int main(int argc, char **argv) {
   std::cout << std::fixed << std::setprecision(2);
   // Compute result
   std::cout << "result of polynomial by brute force algorithm is " <<
-         BruteForceComputePolynomialFunction(a, n, x) << std::endl;
+         BruteForceComputePolynomialFunction(a, x) << std::endl;
   std::cout << "result of polynomial by QINGJiuShao's algorithm is " <<
-         QingjiushaosComputePolynomialFunction(a, n, x) << std::endl;
+         QingjiushaosComputePolynomialFunction(a, x) << std::endl;
   std::cout << "result of posynomial by brute force algorithm is " <<
-         BruteForceComputePosynomialFunction(a, n, x) << std::endl;
+         BruteForceComputePosynomialFunction(a, x) << std::endl;
   std::cout << "result of posynomial by QINGJiuShao's algorithm is " <<
-         QingjiushaosComputePosynomialFunction(a, n, x) << std::endl;
+         QingjiushaosComputePosynomialFunction(a, x) << std::endl;
 
   // Time and output
   const int times = 100000000;
@@ -47,12 +48,12 @@ int main(int argc, char **argv) {
   Timer timer{};
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    BruteForceComputePolynomialFunction(a, n, x);
+    BruteForceComputePolynomialFunction(a, x);
   }
   brute_force_runtime = timer.Stop();
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    QingjiushaosComputePolynomialFunction(a, n, x);
+    QingjiushaosComputePolynomialFunction(a, x);
   }
   QINGJiuShaos_runtime = timer.Stop();
   improvement = (brute_force_runtime - QINGJiuShaos_runtime) / brute_force_runtime;
@@ -61,12 +62,12 @@ int main(int argc, char **argv) {
       "s\n  improvement: " << improvement * 100 << "%" << std::endl;
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    BruteForceComputePosynomialFunction(a, n, x);
+    BruteForceComputePosynomialFunction(a, x);
   }
   brute_force_runtime = timer.Stop();
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    QingjiushaosComputePosynomialFunction(a, n, x);
+    QingjiushaosComputePosynomialFunction(a, x);
   }
   QINGJiuShaos_runtime = timer.Stop();
   improvement = (brute_force_runtime - QINGJiuShaos_runtime) / brute_force_runtime;

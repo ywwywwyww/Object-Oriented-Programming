@@ -29,7 +29,7 @@ class Timer {
 
   /**
    * Stops timing
-   * @return Time elapsed by second
+   * @return Time elapsed in seconds
    */
   double Stop() {
     end_time_ = GetTimeOfDay();

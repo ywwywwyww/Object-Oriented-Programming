@@ -7,7 +7,8 @@
 
 #include "func.h"
 
-double BruteForceComputePolynomialFunction(const double *a, const int &n, const double &x) {
+double BruteForceComputePolynomialFunction(const std::vector<double> &a, const double &x) {
+  int n = a.size();
   double result = 0;
   for (int i = 0; i < n; i++) {
     // Compute x^i
@@ -20,7 +21,8 @@ double BruteForceComputePolynomialFunction(const double *a, const int &n, const 
   return result;
 }
 
-double QingjiushaosComputePolynomialFunction(const double *a, const int &n, const double &x) {
+double QingjiushaosComputePolynomialFunction(const std::vector<double> &a, const double &x) {
+  int n = a.size();
   double result = 0;
   for (int i = n - 1; i >= 0; i--) {
     result = result * x + a[i];
