@@ -35,13 +35,13 @@ int main(int argc, char **argv) {
   std::cout << std::fixed << std::setprecision(2);
   // Compute result
   std::cout << "result of polynomial by brute force algorithm is " <<
-            algorithm::BruteForceComputePolynomialFunction(a, x) << std::endl;
+            brute_force::ComputePolynomialFunction(a, x) << std::endl;
   std::cout << "result of polynomial by QINGJiuShao's algorithm is " <<
-            algorithm::QingjiushaosComputePolynomialFunction(a, x) << std::endl;
+            qingjiushao::ComputePolynomialFunction(a, x) << std::endl;
   std::cout << "result of posynomial by brute force algorithm is " <<
-            algorithm::BruteForceComputePosynomialFunction(a, x) << std::endl;
+            brute_force::ComputePosynomialFunction(a, x) << std::endl;
   std::cout << "result of posynomial by QINGJiuShao's algorithm is " <<
-            algorithm::QingjiushaosComputePosynomialFunction(a, x) << std::endl;
+            qingjiushao::ComputePosynomialFunction(a, x) << std::endl;
 
   // Time and output
   const int times = 100000000;
@@ -49,12 +49,12 @@ int main(int argc, char **argv) {
   Timer timer{};
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    algorithm::BruteForceComputePolynomialFunction(a, x);
+    brute_force::ComputePolynomialFunction(a, x);
   }
   brute_force_runtime = timer.Stop();
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    algorithm::QingjiushaosComputePolynomialFunction(a, x);
+    qingjiushao::ComputePolynomialFunction(a, x);
   }
   QINGJiuShaos_runtime = timer.Stop();
   improvement = (brute_force_runtime - QINGJiuShaos_runtime) / brute_force_runtime;
@@ -63,12 +63,12 @@ int main(int argc, char **argv) {
             "s\n  improvement: " << improvement * 100 << "%" << std::endl;
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    algorithm::BruteForceComputePosynomialFunction(a, x);
+    brute_force::ComputePosynomialFunction(a, x);
   }
   brute_force_runtime = timer.Stop();
   timer.Start();
   for (int i = 1; i <= times; i++) {
-    algorithm::QingjiushaosComputePosynomialFunction(a, x);
+    qingjiushao::ComputePosynomialFunction(a, x);
   }
   QINGJiuShaos_runtime = timer.Stop();
   improvement = (brute_force_runtime - QINGJiuShaos_runtime) / brute_force_runtime;

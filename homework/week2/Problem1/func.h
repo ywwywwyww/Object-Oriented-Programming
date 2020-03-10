@@ -10,7 +10,7 @@
 
 #include <vector>
 
-namespace algorithm {
+namespace brute_force {
 
 /**
  * Computes polynomial function by brute force algorithm
@@ -18,15 +18,7 @@ namespace algorithm {
  * @param x The value of independent variable
  * @return The value of polynomial
  */
-double BruteForceComputePolynomialFunction(const std::vector<double> &a, const double &x);
-
-/**
- * Computes polynomial function by QINGJiuShao's algorithm
- * @param a The coefficients
- * @param x The value of independent variable
- * @return The value of polynomial
- */
-double QingjiushaosComputePolynomialFunction(const std::vector<double> &a, const double &x);
+double ComputePolynomialFunction(const std::vector<double> &a, const double &x);
 
 /**
  * Computes posynomial function by brute force algorithm
@@ -34,7 +26,19 @@ double QingjiushaosComputePolynomialFunction(const std::vector<double> &a, const
  * @param x The value of independent variable
  * @return The value of posynomial
  */
-double BruteForceComputePosynomialFunction(const std::vector<double> &a, const double &x);
+double ComputePosynomialFunction(const std::vector<double> &a, const double &x);
+
+} // namespace brute_force
+
+namespace qingjiushao {
+
+/**
+ * Computes polynomial function by QINGJiuShao's algorithm
+ * @param a The coefficients
+ * @param x The value of independent variable
+ * @return The value of polynomial
+ */
+double ComputePolynomialFunction(const std::vector<double> &a, const double &x);
 
 /**
  * Computes posynomial function by QINGJiuShao's algorithm
@@ -42,8 +46,8 @@ double BruteForceComputePosynomialFunction(const std::vector<double> &a, const d
  * @param x The value of independent variable
  * @return The value of posynomial
  */
-double QingjiushaosComputePosynomialFunction(const std::vector<double> &a, const double &x);
+double ComputePosynomialFunction(const std::vector<double> &a, const double &x);
 
-} // namespace algorithm
+} // namespace qingjiushao
 
 #endif //PROBLEM1_FUNC_H
