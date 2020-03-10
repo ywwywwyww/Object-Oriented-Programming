@@ -7,6 +7,8 @@
 
 #include "func.h"
 
+namespace algorithm {
+
 double BruteForceComputePolynomialFunction(const std::vector<double> &a, const double &x) {
   int n = a.size();
   double result = 0;
@@ -29,3 +31,5 @@ double QingjiushaosComputePolynomialFunction(const std::vector<double> &a, const
   }
   return result;
 }
+
+} // namespace algorithm

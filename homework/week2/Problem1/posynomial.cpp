@@ -9,6 +9,8 @@
 #include <iostream>
 #include "func.h"
 
+namespace algorithm {
+
 double BruteForceComputePosynomialFunction(const std::vector<double> &a, const double &x) {
   if (fabs(x) < 1e-9) {
     std::cerr << "ERROR illegal input: x is zero" << std::endl;
@@ -41,3 +43,5 @@ double QingjiushaosComputePosynomialFunction(const std::vector<double> &a, const
   }
   return result;
 }
+
+} // namespace algorithm

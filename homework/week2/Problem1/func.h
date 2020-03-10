@@ -10,6 +10,8 @@
 
 #include <vector>
 
+namespace algorithm {
+
 /**
  * Computes polynomial function by brute force algorithm
  * @param a The coefficients
@@ -41,5 +43,7 @@ double BruteForceComputePosynomialFunction(const std::vector<double> &a, const d
  * @return The value of posynomial
  */
 double QingjiushaosComputePosynomialFunction(const std::vector<double> &a, const double &x);
+
+} // namespace algorithm
 
 #endif //PROBLEM1_FUNC_H
