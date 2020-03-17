@@ -8,7 +8,6 @@ int main()
   a.display(); //print matrix a
   b.display(); //print matrix b
   Matrix c = a.multiply(b); //compute the product
-  std::cerr << c.GetNumberOfRows() << ' ' << c.GetNumberOfColumns() << std::endl;
   c.display(); //print the product
   c.save("c.txt"); //save a matrix of 6 rows and 6 columns
   return 0;

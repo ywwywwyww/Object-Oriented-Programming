@@ -63,6 +63,5 @@ Matrix Matrix::multiply(const Matrix &b) const {
       }
     }
   }
-  std::cerr << result.GetNumberOfRows() << ' ' << result.GetNumberOfColumns() << std::endl;
   return result;
 }
