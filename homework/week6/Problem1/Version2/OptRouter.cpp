@@ -35,7 +35,7 @@ void OptRouter::mazeBacktrace() {
   // Find path with minimum turns
   optimal_turns_ = kMaxInt;
   Dfs(m_targetIndex, MIN, START);
-  std::cout << "Found a path with minimum turns(" << optimal_turns_ << "): ";
+  std::cout << "Found a path with the minimum turns(" << optimal_turns_ << "): ";
   for (int index : m_path) {
     int x, y;
     compXYIndex(index, x, y);
@@ -46,7 +46,7 @@ void OptRouter::mazeBacktrace() {
   // Find path with maximum turns
   optimal_turns_ = -1;
   Dfs(m_targetIndex, MAX, START);
-  std::cout << "Found a path with maximum turns(" << optimal_turns_ << "): ";
+  std::cout << "Found a path with the maximum turns(" << optimal_turns_ << "): ";
   for (int index : m_path) {
     int x, y;
     compXYIndex(index, x, y);
@@ -66,6 +66,7 @@ void OptRouter::Dfs(int current_index, int aim, int current_direction, int num_t
     current_path_.pop_back();
     return;
   }
+  // Move to the next grid
   int current_x, current_y;
   compXYIndex(current_index, current_x, current_y);
   for (int i = 0; i < kNumDirections; i++) {

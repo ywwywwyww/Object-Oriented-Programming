@@ -3,8 +3,8 @@ sSOURCES=$(wildcard *.cpp)
 HEADERS=$(wildcard *.h)
 lOBJECTS=$(lSOURCES:%.cxx=%.o)
 sOBJECTS=$(sSOURCES:%.cpp=%.o)
-TARGET=maze.exe
-LIB=maze.a
+TARGET=$(shell pwd |sed 's/^\(.*\)[/]//' ).exe
+LIB=$(shell pwd |sed 's/^\(.*\)[/]//' ).a
 
 all: $(TARGET) $(LIB)
 $(TARGET): $(sOBJECTS) $(HEADERS) $(LIB)

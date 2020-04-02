@@ -18,8 +18,8 @@ class OptRouter : public BaseRouter
   void mazeBacktrace();
   bool route();
  protected:
-  enum {START=-1, ROW=0, col=1};
-  enum {MIN=1, MAX=-1};
+  enum {START=-1, ROW=0, col=1}; // The current direction
+  enum {MIN=1, MAX=-1}; // The aim of the path
   /**
    * Finds a path from the current grid to the source with minimum/maximum turns
    * @param current_index The current grid
@@ -28,8 +28,8 @@ class OptRouter : public BaseRouter
    * @param num_turns The current turns
    */
   void Dfs(int current_index, int aim=MIN, int current_direction=START, int num_turns=0);
-  int optimal_turns_;
-  vector <int> current_path_;
+  int optimal_turns_; // The current optimal turns
+  vector <int> current_path_; // The path with optimal turns
 };
 
 #endif //VERSION1__OPTROUTER_H_

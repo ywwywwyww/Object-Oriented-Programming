@@ -9,10 +9,19 @@ class BugFix {
       len_{int(strlen(str))}, data_{new char[len_ + 1]} {
     strcpy(data_, str);
   }
+  /**
+   * The copy constructor
+   * @param bug_fix
+   */
   BugFix(const BugFix &bug_fix) :
       len_{bug_fix.len_}, data_{new char[len_ + 1]} {
     strcpy(data_, bug_fix.data_);
   }
+  /**
+   * The overloaded assignment operator
+   * @param bug_fix
+   * @return
+   */
   BugFix &operator =(const BugFix& bug_fix) {
     len_ = bug_fix.len_;
     delete[] data_;
@@ -20,6 +29,10 @@ class BugFix {
     strcpy(data_, bug_fix.data_);
     return *this;
   }
+  /**
+   * The move constructor
+   * @param bug_fix
+   */
   BugFix(BugFix&& bug_fix) :
       len_{bug_fix.len_}, data_{bug_fix.data_} {
     bug_fix.data_ = nullptr;
