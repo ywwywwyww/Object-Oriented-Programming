@@ -29,7 +29,7 @@ class OptRouter : public BaseRouter
    */
   void Dfs(int current_index, int aim=MIN, int current_direction=START, int num_turns=0);
   int optimal_turns_; // The current optimal turns
-  vector <int> current_path_; // The path with optimal turns
+  vector <int> current_path_; // The path with current optimal turns
 };
 
 #endif //VERSION1__OPTROUTER_H_
