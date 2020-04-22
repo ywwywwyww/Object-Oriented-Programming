@@ -15,6 +15,7 @@ void SuffixTrie::insert(const char *s, int value) {
     string_temp[i] = s[length - i - 1];
   }
   this->trie_->insert(string_temp, value);
+  delete[] string_temp;
 }
 
 void SuffixTrie::searchSubString(const char *s) {
@@ -25,6 +26,7 @@ void SuffixTrie::searchSubString(const char *s) {
     string_temp[i] = s[length - i - 1];
   }
   this->trie_->searchSubString(string_temp);
+  delete[] string_temp;
 }
 
 void SuffixTrie::printMatches() {

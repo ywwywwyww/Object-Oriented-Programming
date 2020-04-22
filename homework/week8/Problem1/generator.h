@@ -13,7 +13,7 @@
 class Generator {
  public:
   /**
-   * Generate strings and inserts them into a trie
+   * Generates strings and inserts them into a trie
    * @tparam T Type of the trie
    * @param trie The give trie
    * @param num The number of strings
