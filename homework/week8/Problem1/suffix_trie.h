@@ -8,8 +8,9 @@
 #define PROBLEM1__SUFFIX_TRIE_H_
 
 #include "my_trie.h"
+#include "BaseTrie.h"
 
-class SuffixTrie {
+class SuffixTrie : private BaseTrie {
  public:
   SuffixTrie() : trie_{new MyTrie{}} {}
   /**
@@ -34,6 +35,7 @@ class SuffixTrie {
    */
   virtual void printMatches();
  private:
+  virtual void getString(std::string &str, int &value);
   MyTrie *trie_; // The trie
 };
 

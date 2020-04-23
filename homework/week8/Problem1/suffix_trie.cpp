@@ -32,3 +32,5 @@ void SuffixTrie::searchSubString(const char *s) {
 void SuffixTrie::printMatches() {
   this->trie_->printMatches(true);
 }
+
+void SuffixTrie::getString(std::string &str, int &value) {}

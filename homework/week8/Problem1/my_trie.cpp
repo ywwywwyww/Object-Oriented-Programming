@@ -13,12 +13,12 @@ void MyTrie::getString(std::string &str, int &value) {
 }
 
 void MyTrie::printMatches(bool reverse) {
-  for (auto& result : this->search_results_) {
+  for (auto& [string, value] : this->search_results_) {
     // Reverse the result string for the SuffixTrie
     if (reverse) {
-      std::reverse(result.first.begin(),result.first.end());
+      std::reverse(string.begin(),string.end());
     }
-    std::cout << result.first << " " << result.second << '\n';
+    std::cout << string << " " << value << '\n';
   }
   std::cout << "Total #strings matched: " << this->search_results_.size() << '\n' << std::endl;
   this->search_results_.clear();
