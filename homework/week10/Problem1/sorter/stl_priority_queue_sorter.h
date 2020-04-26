@@ -19,7 +19,7 @@ class StlPriorityQueueSorter : public Sorter {
   class PizzaCmp {
    public:
     bool operator()(const T &a, const T &b) {
-      return a->GetId() < b->GetId();
+      return a->GetId() > b->GetId();
     }
   };
   std::priority_queue<Pizza *, std::vector<Pizza *>, StlPriorityQueueSorter::PizzaCmp<Pizza *> > priority_queue_;

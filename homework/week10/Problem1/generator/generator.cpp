@@ -10,7 +10,7 @@ std::string Generator::GenerateString() {
   std::string string {};
   const int kLength = 16;
   for (int i = 1; i <= kLength; i++) {
-    if (int ch = rand() % 26; ch < 10) {
+    if (int ch = rand() % 36; ch < 10) {
       string += ch + '0';
     } else {
       string += ch - 10 + 'a';

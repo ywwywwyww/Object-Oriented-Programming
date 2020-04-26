@@ -55,7 +55,7 @@ void TestSort() {
   std::cout << "STL sort time: " << Time(modest_heap) << "s" << std::endl;
   std::cout << "Custom sort time: " << Time(handsome_heap) << "s" << std::endl;
   std::cout << "STL priority queue time: " << Time(honest_heap) << "s" << std::endl;
-//  modest_heap->Display();
+//  honest_heap->Display();
 }
 
 int main() {
