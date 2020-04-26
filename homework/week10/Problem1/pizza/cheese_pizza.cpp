@@ -5,8 +5,7 @@
  */
 
 #include "cheese_pizza.h"
-#include <iostream>
 
-void CheesePizza::SellPizza() {
-  std::cout << "sell a cheese pizza with id: " << this->id_ << std::endl;
+void CheesePizza::SellPizza(std::ostream &out) {
+  out << "sell a cheese pizza with id: " << this->id_ << std::endl;
 }

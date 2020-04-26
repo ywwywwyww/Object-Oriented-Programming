@@ -8,12 +8,16 @@
 #define PROBLEM1_PIZZA_HEAP_PIZZA_HEAP_H_
 
 #include <vector>
+#include <iostream>
 #include "../pizza/pizza.h"
+#include "../sorter/sorter.h"
 
 class PizzaHeap {
  public:
   PizzaHeap(Sorter *sorter);
   void Insert(Pizza *pizza);
+  void Display(std::ostream &out = std::cout);
+  void Sort();
  private:
   Sorter *sorter_;
   std::vector<Pizza*> pizzas_;

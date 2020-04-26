@@ -7,8 +7,11 @@
 #ifndef PROBLEM1_SORTER_STL_SORT_SORTER_H_
 #define PROBLEM1_SORTER_STL_SORT_SORTER_H_
 
-class stl_sort_sorter {
+#include "sorter.h"
 
+class StlSortSorter : public Sorter {
+ public:
+  void Sort(std::vector<Pizza*> &pizzas) override;
 };
 
 #endif //PROBLEM1_SORTER_STL_SORT_SORTER_H_

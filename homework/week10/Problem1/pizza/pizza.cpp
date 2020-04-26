@@ -8,3 +8,7 @@
 #include "../generator/generator.h"
 
 Pizza::Pizza() : id_{Generator::GetInstance().GenerateId()} {}
+
+const std::string & Pizza::GetId() {
+  return this->id_;
+}

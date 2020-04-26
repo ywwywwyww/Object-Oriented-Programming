@@ -8,11 +8,13 @@
 #define PROBLEM1__PIZZA_H_
 
 #include <string>
+#include <iostream>
 
 class Pizza {
  public:
   Pizza();
-  virtual void SellPizza() = 0;
+  virtual void SellPizza(std::ostream &out = std::cout) = 0;
+  const std::string &GetId();
   virtual ~Pizza() = default;
  protected:
   std::string id_;

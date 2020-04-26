@@ -12,7 +12,7 @@
 
 class VeggiePizzaFactory : public PizzaFactory {
  public:
-  Pizza* CreatePizza();
+  Pizza* CreatePizza() override;
 };
 
 #endif //PROBLEM1__VEGGIE_PIZZA_FACTORY_H_

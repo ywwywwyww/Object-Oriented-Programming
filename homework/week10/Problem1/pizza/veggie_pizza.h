@@ -11,7 +11,7 @@
 
 class VeggiePizza : public Pizza {
  public:
-  void SellPizza();
+  void SellPizza(std::ostream &out = std::cout) override;
 };
 
 #endif //PROBLEM1__VEGGIE_PIZZA_H_
