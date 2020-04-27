@@ -9,6 +9,9 @@
 
 #include "../pizza/pizza.h"
 
+/**
+ * The same as example
+ */
 class PizzaFactory {
  public:
   virtual Pizza* CreatePizza() = 0;

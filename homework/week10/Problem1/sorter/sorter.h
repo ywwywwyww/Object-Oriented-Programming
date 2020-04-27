@@ -12,6 +12,10 @@
 
 class Sorter {
  public:
+  /**
+   * Sorts the given pizza vector
+   * @param pizzas The pizza vector
+   */
   virtual void Sort(std::vector<Pizza*> &pizzas) = 0;
 };
 

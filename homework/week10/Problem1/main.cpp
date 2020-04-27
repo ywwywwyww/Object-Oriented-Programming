@@ -7,9 +7,11 @@
 #include "pizza_heap/pizza_heap.h"
 #include "sorter/stl_sort_sorter.h"
 #include "sorter/stl_priority_queue_sorter.h"
-#include "generator/generator.h"
 #include "timer/timer.h"
 
+/**
+ * Tests the pizza factory and pizza store class
+ */
 void TestFactory() {
   PizzaStore *store {new PizzaStore};
   PizzaFactory *factory {new CheesePizzaFactory};
@@ -24,6 +26,12 @@ void TestFactory() {
   delete store;
 }
 
+/**
+ * Times the time of heap
+ * @tparam T
+ * @param heap
+ * @return Runtime
+ */
 template<typename T>
 double Time(T heap) {
   Timer timer;
@@ -33,6 +41,9 @@ double Time(T heap) {
   return timer.time();
 }
 
+/**
+ * Tests the sorter class and heap class
+ */
 void TestSort() {
   auto store {new PizzaStore};
   auto cheese_factory {new CheesePizzaFactory};
@@ -41,7 +52,10 @@ void TestSort() {
   auto modest_heap {new PizzaHeap {new StlSortSorter {}}};
   auto handsome_heap {new PizzaHeap {new CustomSorter {}}};
   auto honest_heap {new PizzaHeap {new StlPriorityQueueSorter {}}};
+
   const int kCheesePizzaCnt = 500, kVeggiePizzaCnt = 500;
+
+  // Insert pizzas
   for (int i = 0; i < kCheesePizzaCnt; i++) {
     modest_heap->Insert(store->OrderPizza(cheese_factory));
     handsome_heap->Insert(store->OrderPizza(cheese_factory));
@@ -52,9 +66,13 @@ void TestSort() {
     handsome_heap->Insert(store->OrderPizza(veggie_factory));
     honest_heap->Insert(store->OrderPizza(veggie_factory));
   }
+
+  // Sort and time
   std::cout << "STL sort time: " << Time(modest_heap) << "s" << std::endl;
   std::cout << "Custom sort time: " << Time(handsome_heap) << "s" << std::endl;
   std::cout << "STL priority queue time: " << Time(honest_heap) << "s" << std::endl;
+
+  // Display the results
 //  honest_heap->Display();
 }
 

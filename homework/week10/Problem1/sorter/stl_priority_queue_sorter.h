@@ -11,10 +11,22 @@
 #include <queue>
 #include <algorithm>
 
+/**
+ * The sorter class for sorting pizzas
+ * Uses adapter design style
+ */
 class StlPriorityQueueSorter : public Sorter {
  public:
+  /**
+   * Sorts the pizza vector using stl priority queue
+   * @param pizzas The pizza vector
+   */
   void Sort(std::vector<Pizza *> &pizzas) override;
  private:
+  /**
+   * The functor for comparing
+   * @tparam T Class Pizza
+   */
   template<typename T>
   class PizzaCmp {
    public:

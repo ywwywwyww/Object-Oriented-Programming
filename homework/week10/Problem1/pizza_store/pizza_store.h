@@ -10,6 +10,9 @@
 #include "../pizza/pizza.h"
 #include "../pizza_factory/pizza_factory.h"
 
+/**
+ * The same as example
+ */
 class PizzaStore {
  public:
   Pizza* OrderPizza(PizzaFactory *factory);

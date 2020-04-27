@@ -23,7 +23,7 @@ std::string Generator::GenerateId() {
   std::string string {};
   do {
     string = this->GenerateString();
-  } while(this->ids.count(string) != 0);
-  this->ids.insert(string);
+  } while(this->ids_.count(string) != 0);
+  this->ids_.insert(string);
   return string;
 }

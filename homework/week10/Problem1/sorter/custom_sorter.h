@@ -9,6 +9,10 @@
 
 #include "sorter.h"
 
+/**
+ * A sorter class for sorting pizzas
+ * Uses custom sorting function
+ */
 class CustomSorter : public Sorter {
  private:
   void Sort(std::vector<Pizza *> &pizzas) override;

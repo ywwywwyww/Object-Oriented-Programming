@@ -18,15 +18,23 @@ class Generator {
     static Generator instance;
     return instance;
   }
+  /**
+   * Generates a random distinct id
+   * @return The id
+   */
   std::string GenerateId();
  private:
-  Generator() : ids{} {
+  Generator() : ids_{} {
     srand(time(NULL));
   };
   Generator(Generator &) = default;
   Generator(Generator &&) = default;
+  /**
+   * Generates a random string
+   * @return The string
+   */
   std::string GenerateString();
-  std::set<std::string> ids;
+  std::set<std::string> ids_; // The generated ids
 };
 
 #endif //PROBLEM1__GENERATOR_H_

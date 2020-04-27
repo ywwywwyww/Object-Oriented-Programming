@@ -9,8 +9,16 @@
 
 #include "sorter.h"
 
+/**
+ * A sorter class for sorting pizzas
+ * Uses stl sort
+ */
 class StlSortSorter : public Sorter {
  public:
+  /**
+   * Sorts the given pizza vector using stl sort function
+   * @param pizzas The pizza vector
+   */
   void Sort(std::vector<Pizza*> &pizzas) override;
 };
 
