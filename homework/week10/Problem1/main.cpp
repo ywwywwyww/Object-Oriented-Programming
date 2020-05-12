@@ -74,6 +74,13 @@ void TestSort() {
 
   // Display the results
 //  honest_heap->Display();
+
+  delete store;
+  delete cheese_factory;
+  delete veggie_factory;
+  delete modest_heap;
+  delete handsome_heap;
+  delete honest_heap;
 }
 
 int main() {
