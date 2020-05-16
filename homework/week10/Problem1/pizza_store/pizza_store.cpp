@@ -6,7 +6,7 @@
 
 #include "pizza_store.h"
 
-Pizza *PizzaStore::OrderPizza(PizzaFactory *factory) {
-  Pizza *pizza{factory->CreatePizza()};
+std::shared_ptr<Pizza> PizzaStore::OrderPizza(std::shared_ptr<PizzaFactory> factory) {
+  std::shared_ptr<Pizza> pizza{factory->CreatePizza()};
   return pizza;
 }

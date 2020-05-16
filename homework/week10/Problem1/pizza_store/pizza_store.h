@@ -15,7 +15,7 @@
  */
 class PizzaStore {
  public:
-  Pizza* OrderPizza(PizzaFactory *factory);
+  std::shared_ptr<Pizza> OrderPizza(std::shared_ptr<PizzaFactory> factory);
 };
 
 #endif //PROBLEM1__PIZZA_STORE_H_

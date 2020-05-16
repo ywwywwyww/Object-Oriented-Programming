@@ -11,6 +11,7 @@
 #include <iostream>
 #include "../pizza/pizza.h"
 #include "../sorter/sorter.h"
+#include <memory>
 
 /**
  * A heap to store and sort pizza
@@ -18,12 +19,12 @@
  */
 class PizzaHeap {
  public:
-  explicit PizzaHeap(Sorter *sorter);
+  explicit PizzaHeap(std::shared_ptr<Sorter> sorter);
   /**
    * Inserts a pizza to the heap
    * @param pizza The pizza to be inserted
    */
-  void Insert(Pizza *pizza);
+  void Insert(std::shared_ptr<Pizza> pizza);
   /**
    * Displays all the pizza in the heap
    * @param out The output stream
@@ -34,8 +35,8 @@ class PizzaHeap {
    */
   void Sort();
  private:
-  Sorter *sorter_; // The sorter
-  std::vector<Pizza*> pizzas_; // The pizzas in the heap
+  std::shared_ptr<Sorter> sorter_; // The sorter
+  std::vector<std::shared_ptr<Pizza>> pizzas_; // The pizzas in the heap
 };
 
 #endif //PROBLEM1_PIZZA_HEAP_PIZZA_HEAP_H_

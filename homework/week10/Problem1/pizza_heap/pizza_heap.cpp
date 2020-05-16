@@ -6,9 +6,9 @@
 
 #include "pizza_heap.h"
 
-PizzaHeap::PizzaHeap(Sorter *sorter) : sorter_{sorter}, pizzas_{} {}
+PizzaHeap::PizzaHeap(std::shared_ptr<Sorter> sorter) : sorter_{sorter}, pizzas_{} {}
 
-void PizzaHeap::Insert(Pizza *pizza) {
+void PizzaHeap::Insert(std::shared_ptr<Pizza> pizza) {
   this->pizzas_.push_back(pizza);
 }
 

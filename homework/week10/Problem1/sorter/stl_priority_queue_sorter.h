@@ -21,7 +21,7 @@ class StlPriorityQueueSorter : public Sorter {
    * Sorts the pizza vector using stl priority queue
    * @param pizzas The pizza vector
    */
-  void Sort(std::vector<Pizza *> &pizzas) override;
+  void Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) override;
  private:
   /**
    * The functor for comparing
@@ -34,7 +34,7 @@ class StlPriorityQueueSorter : public Sorter {
       return a->GetId() > b->GetId();
     }
   };
-  std::priority_queue<Pizza *, std::vector<Pizza *>, StlPriorityQueueSorter::PizzaCmp<Pizza *> > priority_queue_;
+  std::priority_queue<std::shared_ptr<Pizza>, std::vector<std::shared_ptr<Pizza>>, StlPriorityQueueSorter::PizzaCmp<std::shared_ptr<Pizza>> > priority_queue_;
 };
 
 #endif //PROBLEM1_SORTER_STL_PRIORITY_QUEUE_SORTER_H_

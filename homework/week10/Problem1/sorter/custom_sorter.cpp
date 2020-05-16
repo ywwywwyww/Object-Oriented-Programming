@@ -7,7 +7,7 @@
 #include "custom_sorter.h"
 #include <algorithm>
 
-void CustomSorter::Sort(std::vector<Pizza *> &pizzas) {
+void CustomSorter::Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) {
   for (int length = pizzas.size(), i = 0; i < length; i++) {
     for (int j = i + 1; j < length; j++) {
       if (pizzas[i]->GetId() > pizzas[j]->GetId()) {

@@ -7,7 +7,7 @@
 #include "cheese_pizza_factory.h"
 #include "../pizza/cheese_pizza.h"
 
-Pizza * CheesePizzaFactory::CreatePizza() {
-  Pizza *pizza {new CheesePizza};
+std::shared_ptr<Pizza> CheesePizzaFactory::CreatePizza() {
+  std::shared_ptr<Pizza> pizza {new CheesePizza};
   return pizza;
 }

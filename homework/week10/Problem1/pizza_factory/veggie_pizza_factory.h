@@ -12,7 +12,7 @@
 
 class VeggiePizzaFactory : public PizzaFactory {
  public:
-  Pizza* CreatePizza() override;
+  std::shared_ptr<Pizza> CreatePizza() override;
 };
 
 #endif //PROBLEM1__VEGGIE_PIZZA_FACTORY_H_

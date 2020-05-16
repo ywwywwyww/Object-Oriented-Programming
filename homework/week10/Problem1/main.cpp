@@ -8,22 +8,19 @@
 #include "sorter/stl_sort_sorter.h"
 #include "sorter/stl_priority_queue_sorter.h"
 #include "timer/timer.h"
+#include <memory>
 
 /**
  * Tests the pizza factory and pizza store class
  */
 void TestFactory() {
-  PizzaStore *store {new PizzaStore};
-  PizzaFactory *factory {new CheesePizzaFactory};
+  std::shared_ptr<PizzaStore> store{new PizzaStore};
+  std::shared_ptr<PizzaFactory> factory{new CheesePizzaFactory};
 
   store->OrderPizza(factory)->SellPizza();
-  delete factory;
 
-  factory = new VeggiePizzaFactory;
+  factory.reset(new VeggiePizzaFactory);
   store->OrderPizza(factory)->SellPizza();
-
-  delete factory;
-  delete store;
 }
 
 /**
@@ -45,13 +42,13 @@ double Time(T heap) {
  * Tests the sorter class and heap class
  */
 void TestSort() {
-  auto store {new PizzaStore};
-  auto cheese_factory {new CheesePizzaFactory};
-  auto veggie_factory {new VeggiePizzaFactory};
+  std::shared_ptr<PizzaStore> store{new PizzaStore};
+  std::shared_ptr<CheesePizzaFactory> cheese_factory{new CheesePizzaFactory};
+  std::shared_ptr<VeggiePizzaFactory> veggie_factory{new VeggiePizzaFactory};
 
-  auto modest_heap {new PizzaHeap {new StlSortSorter {}}};
-  auto handsome_heap {new PizzaHeap {new CustomSorter {}}};
-  auto honest_heap {new PizzaHeap {new StlPriorityQueueSorter {}}};
+  std::shared_ptr<PizzaHeap> modest_heap{new PizzaHeap{std::make_shared<StlSortSorter>()}};
+  std::shared_ptr<PizzaHeap> handsome_heap{new PizzaHeap{std::make_shared<CustomSorter>()}};
+  std::shared_ptr<PizzaHeap> honest_heap{new PizzaHeap{std::make_shared<StlPriorityQueueSorter>()}};
 
   const int kCheesePizzaCnt = 500, kVeggiePizzaCnt = 500;
 
@@ -74,13 +71,6 @@ void TestSort() {
 
   // Display the results
 //  honest_heap->Display();
-
-  delete store;
-  delete cheese_factory;
-  delete veggie_factory;
-  delete modest_heap;
-  delete handsome_heap;
-  delete honest_heap;
 }
 
 int main() {

@@ -9,6 +9,7 @@
 
 #include "../pizza/pizza.h"
 #include <vector>
+#include <memory>
 
 class Sorter {
  public:
@@ -16,7 +17,7 @@ class Sorter {
    * Sorts the given pizza vector
    * @param pizzas The pizza vector
    */
-  virtual void Sort(std::vector<Pizza*> &pizzas) = 0;
+  virtual void Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) = 0;
 };
 
 #endif //PROBLEM1_SORTER_SORTER_H_

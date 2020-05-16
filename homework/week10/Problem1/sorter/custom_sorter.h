@@ -15,7 +15,7 @@
  */
 class CustomSorter : public Sorter {
  private:
-  void Sort(std::vector<Pizza *> &pizzas) override;
+  void Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) override;
 };
 
 #endif //PROBLEM1_SORTER_CUSTOM_SORTER_H_

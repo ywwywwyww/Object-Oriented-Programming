@@ -6,7 +6,7 @@
 
 #include "stl_priority_queue_sorter.h"
 
-void StlPriorityQueueSorter::Sort(std::vector<Pizza *> &pizzas) {
+void StlPriorityQueueSorter::Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) {
   while (!(this->priority_queue_.empty())) {
     this->priority_queue_.pop();
   }

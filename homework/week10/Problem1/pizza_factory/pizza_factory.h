@@ -8,13 +8,14 @@
 #define PROBLEM1__PIZZA_FACTORY_H_
 
 #include "../pizza/pizza.h"
+#include <memory>
 
 /**
  * The same as example
  */
 class PizzaFactory {
  public:
-  virtual Pizza* CreatePizza() = 0;
+  virtual std::shared_ptr<Pizza> CreatePizza() = 0;
   virtual ~PizzaFactory() = default;
 };
 

@@ -19,7 +19,7 @@ class StlSortSorter : public Sorter {
    * Sorts the given pizza vector using stl sort function
    * @param pizzas The pizza vector
    */
-  void Sort(std::vector<Pizza*> &pizzas) override;
+  void Sort(std::vector<std::shared_ptr<Pizza>> &pizzas) override;
 };
 
 #endif //PROBLEM1_SORTER_STL_SORT_SORTER_H_
