@@ -123,60 +123,6 @@ codes/fast:
 	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/build
 .PHONY : codes/fast
 
-example/array_convex_hull_2.o: example/array_convex_hull_2.cpp.o
-
-.PHONY : example/array_convex_hull_2.o
-
-# target to build an object file
-example/array_convex_hull_2.cpp.o:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/array_convex_hull_2.cpp.o
-.PHONY : example/array_convex_hull_2.cpp.o
-
-example/array_convex_hull_2.i: example/array_convex_hull_2.cpp.i
-
-.PHONY : example/array_convex_hull_2.i
-
-# target to preprocess a source file
-example/array_convex_hull_2.cpp.i:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/array_convex_hull_2.cpp.i
-.PHONY : example/array_convex_hull_2.cpp.i
-
-example/array_convex_hull_2.s: example/array_convex_hull_2.cpp.s
-
-.PHONY : example/array_convex_hull_2.s
-
-# target to generate assembly for a file
-example/array_convex_hull_2.cpp.s:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/array_convex_hull_2.cpp.s
-.PHONY : example/array_convex_hull_2.cpp.s
-
-example/convex_hull_yz.o: example/convex_hull_yz.cpp.o
-
-.PHONY : example/convex_hull_yz.o
-
-# target to build an object file
-example/convex_hull_yz.cpp.o:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/convex_hull_yz.cpp.o
-.PHONY : example/convex_hull_yz.cpp.o
-
-example/convex_hull_yz.i: example/convex_hull_yz.cpp.i
-
-.PHONY : example/convex_hull_yz.i
-
-# target to preprocess a source file
-example/convex_hull_yz.cpp.i:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/convex_hull_yz.cpp.i
-.PHONY : example/convex_hull_yz.cpp.i
-
-example/convex_hull_yz.s: example/convex_hull_yz.cpp.s
-
-.PHONY : example/convex_hull_yz.s
-
-# target to generate assembly for a file
-example/convex_hull_yz.cpp.s:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/convex_hull_yz.cpp.s
-.PHONY : example/convex_hull_yz.cpp.s
-
 example/exact.o: example/exact.cpp.o
 
 .PHONY : example/exact.o
@@ -203,87 +149,6 @@ example/exact.s: example/exact.cpp.s
 example/exact.cpp.s:
 	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/exact.cpp.s
 .PHONY : example/exact.cpp.s
-
-example/points_and_segment.o: example/points_and_segment.cpp.o
-
-.PHONY : example/points_and_segment.o
-
-# target to build an object file
-example/points_and_segment.cpp.o:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/points_and_segment.cpp.o
-.PHONY : example/points_and_segment.cpp.o
-
-example/points_and_segment.i: example/points_and_segment.cpp.i
-
-.PHONY : example/points_and_segment.i
-
-# target to preprocess a source file
-example/points_and_segment.cpp.i:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/points_and_segment.cpp.i
-.PHONY : example/points_and_segment.cpp.i
-
-example/points_and_segment.s: example/points_and_segment.cpp.s
-
-.PHONY : example/points_and_segment.s
-
-# target to generate assembly for a file
-example/points_and_segment.cpp.s:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/points_and_segment.cpp.s
-.PHONY : example/points_and_segment.cpp.s
-
-example/surprising.o: example/surprising.cpp.o
-
-.PHONY : example/surprising.o
-
-# target to build an object file
-example/surprising.cpp.o:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/surprising.cpp.o
-.PHONY : example/surprising.cpp.o
-
-example/surprising.i: example/surprising.cpp.i
-
-.PHONY : example/surprising.i
-
-# target to preprocess a source file
-example/surprising.cpp.i:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/surprising.cpp.i
-.PHONY : example/surprising.cpp.i
-
-example/surprising.s: example/surprising.cpp.s
-
-.PHONY : example/surprising.s
-
-# target to generate assembly for a file
-example/surprising.cpp.s:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/surprising.cpp.s
-.PHONY : example/surprising.cpp.s
-
-example/vector_convex_hull_2.o: example/vector_convex_hull_2.cpp.o
-
-.PHONY : example/vector_convex_hull_2.o
-
-# target to build an object file
-example/vector_convex_hull_2.cpp.o:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/vector_convex_hull_2.cpp.o
-.PHONY : example/vector_convex_hull_2.cpp.o
-
-example/vector_convex_hull_2.i: example/vector_convex_hull_2.cpp.i
-
-.PHONY : example/vector_convex_hull_2.i
-
-# target to preprocess a source file
-example/vector_convex_hull_2.cpp.i:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/vector_convex_hull_2.cpp.i
-.PHONY : example/vector_convex_hull_2.cpp.i
-
-example/vector_convex_hull_2.s: example/vector_convex_hull_2.cpp.s
-
-.PHONY : example/vector_convex_hull_2.s
-
-# target to generate assembly for a file
-example/vector_convex_hull_2.cpp.s:
-	$(MAKE) -f CMakeFiles/codes.dir/build.make CMakeFiles/codes.dir/example/vector_convex_hull_2.cpp.s
-.PHONY : example/vector_convex_hull_2.cpp.s
 
 main.o: main.cpp.o
 
@@ -321,24 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... codes"
 	@echo "... edit_cache"
-	@echo "... example/array_convex_hull_2.o"
-	@echo "... example/array_convex_hull_2.i"
-	@echo "... example/array_convex_hull_2.s"
-	@echo "... example/convex_hull_yz.o"
-	@echo "... example/convex_hull_yz.i"
-	@echo "... example/convex_hull_yz.s"
 	@echo "... example/exact.o"
 	@echo "... example/exact.i"
 	@echo "... example/exact.s"
-	@echo "... example/points_and_segment.o"
-	@echo "... example/points_and_segment.i"
-	@echo "... example/points_and_segment.s"
-	@echo "... example/surprising.o"
-	@echo "... example/surprising.i"
-	@echo "... example/surprising.s"
-	@echo "... example/vector_convex_hull_2.o"
-	@echo "... example/vector_convex_hull_2.i"
-	@echo "... example/vector_convex_hull_2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

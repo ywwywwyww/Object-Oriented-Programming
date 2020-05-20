@@ -76,22 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/yww/OOP/code_reading/codes/example/array_convex_hull_2.cpp">
-			<Option target="codes"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/code_reading/codes/example/convex_hull_yz.cpp">
-			<Option target="codes"/>
-		</Unit>
 		<Unit filename="/home/yww/OOP/code_reading/codes/example/exact.cpp">
-			<Option target="codes"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/code_reading/codes/example/points_and_segment.cpp">
-			<Option target="codes"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/code_reading/codes/example/surprising.cpp">
-			<Option target="codes"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/code_reading/codes/example/vector_convex_hull_2.cpp">
 			<Option target="codes"/>
 		</Unit>
 		<Unit filename="/home/yww/OOP/code_reading/codes/main.cpp">

@@ -11,9 +11,9 @@ void ArrayConvexHull2();
 void VectorConvexHull2();
 
 int main() {
-  PointsAndSegment();
+//  PointsAndSegment();
 //  Surprising();
-//  Exact();
+  Exact();
 //  ArrayConvexHull2();
 //  VectorConvexHull2();
   return 0;

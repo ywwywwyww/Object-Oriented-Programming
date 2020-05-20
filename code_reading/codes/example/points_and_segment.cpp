@@ -30,3 +30,4 @@ int PointsAndSegment() {
   std::cout << " midpoint(p,q) = " << CGAL::midpoint(p, q) << std::endl;
   return 0;
 }
+
