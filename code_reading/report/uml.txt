@@ -1,0 +1,22 @@
+classDiagram
+
+    Array *-- Handle_for
+    Handle <-- VectorC2
+    Handle_for o-- VectorC2
+    VectorC2: -base : Handle_for
+    
+    VectorC2 <-- Angle_2
+    PointC2 <-- Angle_2
+    VectorC2 *-- PointC2
+    PointC2: -base : VectorC2
+    PointC2 o-- Cartesian_base
+    VectorC2 o-- Cartesian_base
+
+
+    Angle_2 o-- Cartesian_base_ref_count
+    Handle_for <-- Handle
+    Handle -- Cartesian_base_ref_count
+    Cartesian_base <|-- Cartesian_base_ref_count
+    Cartesian_base_ref_count <|-- Type_equality_wrapper
+    Cartesian_base_ref_count: +Angle_2 : Angle_2
+    Type_equality_wrapper <|-- Cartesian
