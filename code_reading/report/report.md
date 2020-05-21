@@ -116,7 +116,7 @@ Summary: approximate 2000 lines of codes or more.
 
 ### Purpose
 
-In order to understand how CGAL works, I delve into one of the most fundamental and widely used parts of CGAL - kernel. The kernel part allows you to use algorithms without self-defined objects, predicates, and constructions.
+In order to understand how CGAL works, I delve into one of the most fundamental and widely used parts of CGAL - kernel. The kernel part allows you to use algorithms without self-defined objects, predicates, and constructions. This software design document describes the architecture and design of Cartesian kernel.
 
 ### Scope
 
