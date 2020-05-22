@@ -7,11 +7,12 @@
 #ifndef SRC_GRAPH_DELAUNAY_TRIANGULATION_H_
 #define SRC_GRAPH_DELAUNAY_TRIANGULATION_H_
 
-#include "undirected_graph.h"
+#include "construction_strategy.h"
+#include "graph.h"
 
-class DelaunayTriangulation : public UndirectedGraph {
+class DelaunayTriangulation : public ConstructionStrategy {
  public:
-  explicit DelaunayTriangulation(const std::vector<Point> &vertices);
+  void Construct(Graph *const &graph) const override;
 };
 
 #endif //SRC_GRAPH_DELAUNAY_TRIANGULATION_H_

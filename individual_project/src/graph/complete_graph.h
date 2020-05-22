@@ -7,11 +7,11 @@
 #ifndef SRC_GRAPH_COMPLETE_GRAPH_H_
 #define SRC_GRAPH_COMPLETE_GRAPH_H_
 
-#include "undirected_graph.h"
+#include "construction_strategy.h"
 
-class CompleteGraph : public UndirectedGraph {
+class CompleteGraph : public ConstructionStrategy {
  public:
-  explicit CompleteGraph(const std::vector<Point> &vertices);
+  void Construct(Graph *const &graph) const override;
 };
 
 #endif //SRC_GRAPH_COMPLETE_GRAPH_H_

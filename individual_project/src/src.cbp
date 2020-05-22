@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="src"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/yww/OOP/individual_project/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/yww/OOP/individual_project/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src">
+				<Option output="/home/yww/OOP/individual_project/src/src" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yww/OOP/individual_project/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCGAL_USE_MPFR"/>
+					<Add option="-DCGAL_USE_GMPXX"/>
+					<Add option="-DCGAL_USE_GMP"/>
+					<Add directory="/home/yww/OOP/individual_project/src"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src/fast">
+				<Option output="/home/yww/OOP/individual_project/src/src" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yww/OOP/individual_project/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCGAL_USE_MPFR"/>
+					<Add option="-DCGAL_USE_GMPXX"/>
+					<Add option="-DCGAL_USE_GMP"/>
+					<Add directory="/home/yww/OOP/individual_project/src"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 src/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/yww/OOP/individual_project/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yww/OOP/individual_project/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/yww/OOP/individual_project/src/generator/generator.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/generator/generator.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/complete_graph.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/complete_graph.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/delaunay_triangulation.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/delaunay_triangulation.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/disjoint_set.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/disjoint_set.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph_adapter.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph_adapter.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/kruskal.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/kruskal.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/minimal_spanning_tree.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/minimal_spanning_tree.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/undirected_graph.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/undirected_graph.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/main.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/timer/timer.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/timer/timer.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALLibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_Common.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_GeneratorSpecificSettings.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_Macros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_SetupFlags.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_TweakFindBoost.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_VersionUtils.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/UseCGAL.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

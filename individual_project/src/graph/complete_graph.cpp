@@ -5,11 +5,12 @@
  */
 
 #include "complete_graph.h"
+#include "graph.h"
 
-CompleteGraph::CompleteGraph(const std::vector<Point> &vertices) : UndirectedGraph(vertices) {
-  for (int i = 0; i < this->vertices_.size(); i++) {
+void CompleteGraph::Construct(Graph *const &graph) const {
+  for (int i = 0; i < graph->GetNumVertices(); i++) {
     for (int j = 0; j < i; j++) {
-      this->edges_.emplace_back(i, j);
+      graph->AddEdge(std::pair(i, j));
     }
   }
 }

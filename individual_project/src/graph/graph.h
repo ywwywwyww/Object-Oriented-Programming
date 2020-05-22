@@ -4,8 +4,8 @@
  * @date 5/20/20
  */
 
-#ifndef SRC_GRAPH_UNDIRECTED_GRAPH_H_
-#define SRC_GRAPH_UNDIRECTED_GRAPH_H_
+#ifndef SRC_GRAPH_GRAPH_H_
+#define SRC_GRAPH_GRAPH_H_
 
 #include <vector>
 #include <utility>
@@ -13,21 +13,25 @@
 #include <iostream>
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 
+struct ConstructionStrategy;
+
 /**
  * A class to describe a undirected euclidean graph.
  */
-class UndirectedGraph {
+class Graph {
  public:
   typedef CGAL::Exact_predicates_exact_constructions_kernel Kernel;
   typedef Kernel::Point_2 Point;
   typedef std::pair<int, int> Edge;
 
-  explicit UndirectedGraph(const std::vector<Point> &vertices, const std::vector<Edge> &edges = std::vector<Edge>{})
+  explicit Graph(const std::vector<Point> &vertices, const std::vector<Edge> &edges = std::vector<Edge>{})
       : vertices_{vertices}, edges_{edges} {}
 
-  explicit UndirectedGraph(std::istream &in);
+  explicit Graph(std::istream &in);
 
-  virtual ~UndirectedGraph() = default;
+  Graph(const std::vector<Point> &vertices, ConstructionStrategy *const &strategy);
+
+  virtual ~Graph() = default;
 
   void AddEdge(const Edge &edge);
   void AddEdges(const std::vector<Edge> &edges);
@@ -61,11 +65,11 @@ class UndirectedGraph {
 
   void DisplayEdges(std::ostream &out) const;
 
- protected:
+ private:
   std::vector<Point> vertices_;
   std::vector<Edge> edges_;
 };
 
-std::ostream &operator <<(std::ostream &out, const UndirectedGraph &graph);
+std::ostream &operator <<(std::ostream &out, const Graph &graph);
 
-#endif //SRC_GRAPH_UNDIRECTED_GRAPH_H_
+#endif //SRC_GRAPH_GRAPH_H_
