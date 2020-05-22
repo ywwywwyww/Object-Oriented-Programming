@@ -1,0 +1,53 @@
+classDiagram
+
+class UndirectedGraph
+UndirectedGraph: -vector~Point~ vertices_
+UndirectedGraph: -vector~Edge~ edges_
+UndirectedGraph: +UndirectedGraph(in vertices, in edges)
+UndirectedGraph: +UndirectedGraph(in in)
+UndirectedGraph: +UndirectedGraph(in vertices,in strategy)
+UndirectedGraph: +AddEdge(in edge)
+UndirectedGraph: +AddEdges(in edges)
+UndirectedGraph: +GetNumVertices() int
+UndirectedGraph: +GetNumEdges() int
+UndirectedGraph: +GetVertex(in id) Point
+UndirectedGraph: +GetEdge(in id) Edge
+UndirectedGraph: +GetVertices() vector<Point>
+UndirectedGraph: +GetEdges() vector<Edge>
+UndirectedGraph: +OverallLength() double
+UndirectedGraph: +DisplayVertices(in out)
+UndirectedGraph: +DisplayEdges(in out)
+
+class ConstructionStrategy
+UndirectedGraph -- ConstructionStrategy
+ConstructionStrategy: +Construct(in graph)*
+
+ConstructionStrategy <|.. CompleteGraph
+CompleteGraph: +Construct(in graph)
+ConstructionStrategy <|.. DelaunayTriangulation
+DelaunayTriangulation: +Construct(in graph)
+
+ConstructionStrategy <|-- MinimalSpanningTree
+MinimalSpanningTree: +MinimalSpanningTree(in constraints)
+MinimalSpanningTree: #constraints_
+MinimalSpanningTree <|.. Kruskal
+Kruskal: +Kruskal(in constraints)
+Kruskal: +Construct(in graph)
+
+class DisjointSet
+DisjointSet: -vector<int> father_
+DisjointSet: -vector<int> rank_
+DisjointSet: +DisjointSet(int n)
+DisjointSet: +FindRoot(in n)
+DisjointSet: +Union(in x, in y)
+
+DisjointSet <-- Kruskal
+
+class Generator
+Generator: +static int kMin
+Generator: +static int kMax
+Generator: +Generator()
+Generator: +GeneratePoints(in n)$ vector<Point>
+Generator: +GenerateForest(in n, in m)$ vector<Edge>
+Generator: +GenerateData(in out, in n, in m, in t=1)$
+UndirectedGraph -- Generator
