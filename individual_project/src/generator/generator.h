@@ -10,15 +10,15 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-#include "../graph/undirected_graph.h"
+#include "../graph/graph.h"
 
 class Generator {
  public:
   Generator() {
     srand(time(0));
   }
-  static std::vector<UndirectedGraph::Point> GeneratePoints(int n);
-  static std::vector<UndirectedGraph::Edge> GenerateForest(int n, int m);
+  static std::vector<Graph::Point> GeneratePoints(int n);
+  static std::vector<Graph::Edge> GenerateForest(int n, int m);
   static void GenerateData(std::ostream &out, int n, int m, int t=1);
   static int kMin;
   static int kMax;

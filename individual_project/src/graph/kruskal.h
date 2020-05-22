@@ -7,17 +7,14 @@
 #ifndef SRC_MINIMAL_SPANNING_TREE_KRUSKAL_H_
 #define SRC_MINIMAL_SPANNING_TREE_KRUSKAL_H_
 
-#include <algorithm>
 #include "minimal_spanning_tree.h"
 
 class Kruskal : public MinimalSpanningTree {
  public:
-  /**
-   * Construct a minimal spanning tree of given graph and constraints
-   * @param graph The given graph
-   * @param constraints The constraints edges
-   */
-  explicit Kruskal(const UndirectedGraph &graph, const std::vector<Edge> &constraints = std::vector<Edge>{});
+  explicit Kruskal(const std::vector<Graph::Edge> &constraints = std::vector<Graph::Edge>{}) : MinimalSpanningTree{constraints} {}
+
+  void Construct(Graph *const &graph) const override;
+
 };
 
 #endif //SRC_MINIMAL_SPANNING_TREE_KRUSKAL_H_

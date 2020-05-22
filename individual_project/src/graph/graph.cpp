@@ -5,9 +5,10 @@
  */
 
 #include <CGAL/squared_distance_2.h>
-#include "undirected_graph.h"
+#include "graph.h"
+#include "construction_strategy.h"
 
-UndirectedGraph::UndirectedGraph(std::istream &in) : vertices_{}, edges_{} {
+Graph::Graph(std::istream &in) : vertices_{}, edges_{} {
   int n, m;
   in >> n >> m;
   for (int i = 0; i < n; i++) {
@@ -22,17 +23,21 @@ UndirectedGraph::UndirectedGraph(std::istream &in) : vertices_{}, edges_{} {
   }
 }
 
-void UndirectedGraph::AddEdge(const UndirectedGraph::Edge &edge) {
+Graph::Graph(const std::vector<Point> &vertices, ConstructionStrategy *const &strategy) : Graph{vertices} {
+  strategy->Construct(this);
+}
+
+void Graph::AddEdge(const Graph::Edge &edge) {
   this->edges_.push_back(edge);
 }
 
-void UndirectedGraph::AddEdges(const std::vector<Edge> &edges) {
+void Graph::AddEdges(const std::vector<Edge> &edges) {
   for (const Edge &edge : edges) {
     this->AddEdge(edge);
   }
 }
 
-double UndirectedGraph::OverallLength() const {
+double Graph::OverallLength() const {
   double sum = 0;
   for (auto[u, v] : this->edges_) {
     sum += std::sqrt(CGAL::to_double(CGAL::squared_distance(this->vertices_[u], this->vertices_[v])));
@@ -40,7 +45,7 @@ double UndirectedGraph::OverallLength() const {
   return sum;
 }
 
-void UndirectedGraph::DisplayVertices(std::ostream &out) const {
+void Graph::DisplayVertices(std::ostream &out) const {
   out << this->vertices_.size() << '\n';
   for (const auto &vertex : this->vertices_) {
     out << int(CGAL::to_double(vertex.x()) + 0.5) << ' ' << int(CGAL::to_double(vertex.y()) + 0.5) << '\n';
@@ -48,7 +53,7 @@ void UndirectedGraph::DisplayVertices(std::ostream &out) const {
   out << std::flush;
 }
 
-void UndirectedGraph::DisplayEdges(std::ostream &out) const {
+void Graph::DisplayEdges(std::ostream &out) const {
   out << this->edges_.size() << '\n';
   for (auto[u, v] : this->edges_) {
     out << u << ' ' << v << '\n';
@@ -56,13 +61,13 @@ void UndirectedGraph::DisplayEdges(std::ostream &out) const {
   out << std::flush;
 }
 
-std::ostream &operator<<(std::ostream &out, const UndirectedGraph &graph) {
+std::ostream &operator<<(std::ostream &out, const Graph &graph) {
   out << graph.GetNumVertices() << '\n';
-  for (const UndirectedGraph::Point &vertex : graph.GetVertices()) {
+  for (const Graph::Point &vertex : graph.GetVertices()) {
     out << int(CGAL::to_double(vertex.x()) + 0.5) << ' ' << int(CGAL::to_double(vertex.y()) + 0.5) << '\n';
   }
   out << graph.GetNumEdges() << '\n';
-  for (const UndirectedGraph::Edge &edge : graph.GetEdges()) {
+  for (const Graph::Edge &edge : graph.GetEdges()) {
     out << edge.first << ' ' << edge.second << '\n';
   }
   out << std::flush;

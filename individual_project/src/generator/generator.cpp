@@ -6,18 +6,20 @@
 
 #include <set>
 #include "generator.h"
-#include "../minimal_spanning_tree/disjoint_set.h"
+#include "../graph/disjoint_set.h"
+
+Generator Initializer{};
 
 int Generator::kMin = 1;
 int Generator::kMax = 1000000000;
 
-std::vector<UndirectedGraph::Point> Generator::GeneratePoints(int n) {
-  std::set<UndirectedGraph::Point> set;
-  std::vector<UndirectedGraph::Point> result;
+std::vector<Graph::Point> Generator::GeneratePoints(int n) {
+  std::set<Graph::Point> set;
+  std::vector<Graph::Point> result;
   for (int i = 0; i < n; i++) {
-    UndirectedGraph::Point point;
+    Graph::Point point;
     do {
-      point = UndirectedGraph::Point{rand() % (kMax - kMin + 1) + kMin, rand() % (kMax - kMin + 1) + kMin};
+      point = Graph::Point{rand() % (kMax - kMin + 1) + kMin, rand() % (kMax - kMin + 1) + kMin};
     } while(set.count(point));
     set.insert(point);
     result.push_back(point);
@@ -25,9 +27,9 @@ std::vector<UndirectedGraph::Point> Generator::GeneratePoints(int n) {
   return result;
 }
 
-std::vector<UndirectedGraph::Edge> Generator::GenerateForest(int n, int m) {
+std::vector<Graph::Edge> Generator::GenerateForest(int n, int m) {
   DisjointSet disjoint_set{n};
-  std::vector<UndirectedGraph::Edge> result;
+  std::vector<Graph::Edge> result;
   for (int i = 0; i < m; i++) {
     int u, v;
     do {

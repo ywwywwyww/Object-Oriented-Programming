@@ -177,6 +177,33 @@ graph/complete_graph.cpp.s:
 	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/complete_graph.cpp.s
 .PHONY : graph/complete_graph.cpp.s
 
+graph/construction_strategy.o: graph/construction_strategy.cpp.o
+
+.PHONY : graph/construction_strategy.o
+
+# target to build an object file
+graph/construction_strategy.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/construction_strategy.cpp.o
+.PHONY : graph/construction_strategy.cpp.o
+
+graph/construction_strategy.i: graph/construction_strategy.cpp.i
+
+.PHONY : graph/construction_strategy.i
+
+# target to preprocess a source file
+graph/construction_strategy.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/construction_strategy.cpp.i
+.PHONY : graph/construction_strategy.cpp.i
+
+graph/construction_strategy.s: graph/construction_strategy.cpp.s
+
+.PHONY : graph/construction_strategy.s
+
+# target to generate assembly for a file
+graph/construction_strategy.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/construction_strategy.cpp.s
+.PHONY : graph/construction_strategy.cpp.s
+
 graph/delaunay_triangulation.o: graph/delaunay_triangulation.cpp.o
 
 .PHONY : graph/delaunay_triangulation.o
@@ -204,32 +231,113 @@ graph/delaunay_triangulation.cpp.s:
 	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/delaunay_triangulation.cpp.s
 .PHONY : graph/delaunay_triangulation.cpp.s
 
-graph/undirected_graph.o: graph/undirected_graph.cpp.o
+graph/disjoint_set.o: graph/disjoint_set.cpp.o
 
-.PHONY : graph/undirected_graph.o
+.PHONY : graph/disjoint_set.o
 
 # target to build an object file
-graph/undirected_graph.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/undirected_graph.cpp.o
-.PHONY : graph/undirected_graph.cpp.o
+graph/disjoint_set.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/disjoint_set.cpp.o
+.PHONY : graph/disjoint_set.cpp.o
 
-graph/undirected_graph.i: graph/undirected_graph.cpp.i
+graph/disjoint_set.i: graph/disjoint_set.cpp.i
 
-.PHONY : graph/undirected_graph.i
+.PHONY : graph/disjoint_set.i
 
 # target to preprocess a source file
-graph/undirected_graph.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/undirected_graph.cpp.i
-.PHONY : graph/undirected_graph.cpp.i
+graph/disjoint_set.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/disjoint_set.cpp.i
+.PHONY : graph/disjoint_set.cpp.i
 
-graph/undirected_graph.s: graph/undirected_graph.cpp.s
+graph/disjoint_set.s: graph/disjoint_set.cpp.s
 
-.PHONY : graph/undirected_graph.s
+.PHONY : graph/disjoint_set.s
 
 # target to generate assembly for a file
-graph/undirected_graph.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/undirected_graph.cpp.s
-.PHONY : graph/undirected_graph.cpp.s
+graph/disjoint_set.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/disjoint_set.cpp.s
+.PHONY : graph/disjoint_set.cpp.s
+
+graph/graph.o: graph/graph.cpp.o
+
+.PHONY : graph/graph.o
+
+# target to build an object file
+graph/graph.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/graph.cpp.o
+.PHONY : graph/graph.cpp.o
+
+graph/graph.i: graph/graph.cpp.i
+
+.PHONY : graph/graph.i
+
+# target to preprocess a source file
+graph/graph.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/graph.cpp.i
+.PHONY : graph/graph.cpp.i
+
+graph/graph.s: graph/graph.cpp.s
+
+.PHONY : graph/graph.s
+
+# target to generate assembly for a file
+graph/graph.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/graph.cpp.s
+.PHONY : graph/graph.cpp.s
+
+graph/kruskal.o: graph/kruskal.cpp.o
+
+.PHONY : graph/kruskal.o
+
+# target to build an object file
+graph/kruskal.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/kruskal.cpp.o
+.PHONY : graph/kruskal.cpp.o
+
+graph/kruskal.i: graph/kruskal.cpp.i
+
+.PHONY : graph/kruskal.i
+
+# target to preprocess a source file
+graph/kruskal.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/kruskal.cpp.i
+.PHONY : graph/kruskal.cpp.i
+
+graph/kruskal.s: graph/kruskal.cpp.s
+
+.PHONY : graph/kruskal.s
+
+# target to generate assembly for a file
+graph/kruskal.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/kruskal.cpp.s
+.PHONY : graph/kruskal.cpp.s
+
+graph/minimal_spanning_tree.o: graph/minimal_spanning_tree.cpp.o
+
+.PHONY : graph/minimal_spanning_tree.o
+
+# target to build an object file
+graph/minimal_spanning_tree.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/minimal_spanning_tree.cpp.o
+.PHONY : graph/minimal_spanning_tree.cpp.o
+
+graph/minimal_spanning_tree.i: graph/minimal_spanning_tree.cpp.i
+
+.PHONY : graph/minimal_spanning_tree.i
+
+# target to preprocess a source file
+graph/minimal_spanning_tree.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/minimal_spanning_tree.cpp.i
+.PHONY : graph/minimal_spanning_tree.cpp.i
+
+graph/minimal_spanning_tree.s: graph/minimal_spanning_tree.cpp.s
+
+.PHONY : graph/minimal_spanning_tree.s
+
+# target to generate assembly for a file
+graph/minimal_spanning_tree.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graph/minimal_spanning_tree.cpp.s
+.PHONY : graph/minimal_spanning_tree.cpp.s
 
 main.o: main.cpp.o
 
@@ -257,87 +365,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-minimal_spanning_tree/disjoint_set.o: minimal_spanning_tree/disjoint_set.cpp.o
-
-.PHONY : minimal_spanning_tree/disjoint_set.o
-
-# target to build an object file
-minimal_spanning_tree/disjoint_set.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/disjoint_set.cpp.o
-.PHONY : minimal_spanning_tree/disjoint_set.cpp.o
-
-minimal_spanning_tree/disjoint_set.i: minimal_spanning_tree/disjoint_set.cpp.i
-
-.PHONY : minimal_spanning_tree/disjoint_set.i
-
-# target to preprocess a source file
-minimal_spanning_tree/disjoint_set.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/disjoint_set.cpp.i
-.PHONY : minimal_spanning_tree/disjoint_set.cpp.i
-
-minimal_spanning_tree/disjoint_set.s: minimal_spanning_tree/disjoint_set.cpp.s
-
-.PHONY : minimal_spanning_tree/disjoint_set.s
-
-# target to generate assembly for a file
-minimal_spanning_tree/disjoint_set.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/disjoint_set.cpp.s
-.PHONY : minimal_spanning_tree/disjoint_set.cpp.s
-
-minimal_spanning_tree/kruskal.o: minimal_spanning_tree/kruskal.cpp.o
-
-.PHONY : minimal_spanning_tree/kruskal.o
-
-# target to build an object file
-minimal_spanning_tree/kruskal.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/kruskal.cpp.o
-.PHONY : minimal_spanning_tree/kruskal.cpp.o
-
-minimal_spanning_tree/kruskal.i: minimal_spanning_tree/kruskal.cpp.i
-
-.PHONY : minimal_spanning_tree/kruskal.i
-
-# target to preprocess a source file
-minimal_spanning_tree/kruskal.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/kruskal.cpp.i
-.PHONY : minimal_spanning_tree/kruskal.cpp.i
-
-minimal_spanning_tree/kruskal.s: minimal_spanning_tree/kruskal.cpp.s
-
-.PHONY : minimal_spanning_tree/kruskal.s
-
-# target to generate assembly for a file
-minimal_spanning_tree/kruskal.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/kruskal.cpp.s
-.PHONY : minimal_spanning_tree/kruskal.cpp.s
-
-minimal_spanning_tree/minimal_spanning_tree.o: minimal_spanning_tree/minimal_spanning_tree.cpp.o
-
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.o
-
-# target to build an object file
-minimal_spanning_tree/minimal_spanning_tree.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/minimal_spanning_tree.cpp.o
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.cpp.o
-
-minimal_spanning_tree/minimal_spanning_tree.i: minimal_spanning_tree/minimal_spanning_tree.cpp.i
-
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.i
-
-# target to preprocess a source file
-minimal_spanning_tree/minimal_spanning_tree.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/minimal_spanning_tree.cpp.i
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.cpp.i
-
-minimal_spanning_tree/minimal_spanning_tree.s: minimal_spanning_tree/minimal_spanning_tree.cpp.s
-
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.s
-
-# target to generate assembly for a file
-minimal_spanning_tree/minimal_spanning_tree.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/minimal_spanning_tree/minimal_spanning_tree.cpp.s
-.PHONY : minimal_spanning_tree/minimal_spanning_tree.cpp.s
 
 timer/timer.o: timer/timer.cpp.o
 
@@ -381,24 +408,27 @@ help:
 	@echo "... graph/complete_graph.o"
 	@echo "... graph/complete_graph.i"
 	@echo "... graph/complete_graph.s"
+	@echo "... graph/construction_strategy.o"
+	@echo "... graph/construction_strategy.i"
+	@echo "... graph/construction_strategy.s"
 	@echo "... graph/delaunay_triangulation.o"
 	@echo "... graph/delaunay_triangulation.i"
 	@echo "... graph/delaunay_triangulation.s"
-	@echo "... graph/undirected_graph.o"
-	@echo "... graph/undirected_graph.i"
-	@echo "... graph/undirected_graph.s"
+	@echo "... graph/disjoint_set.o"
+	@echo "... graph/disjoint_set.i"
+	@echo "... graph/disjoint_set.s"
+	@echo "... graph/graph.o"
+	@echo "... graph/graph.i"
+	@echo "... graph/graph.s"
+	@echo "... graph/kruskal.o"
+	@echo "... graph/kruskal.i"
+	@echo "... graph/kruskal.s"
+	@echo "... graph/minimal_spanning_tree.o"
+	@echo "... graph/minimal_spanning_tree.i"
+	@echo "... graph/minimal_spanning_tree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... minimal_spanning_tree/disjoint_set.o"
-	@echo "... minimal_spanning_tree/disjoint_set.i"
-	@echo "... minimal_spanning_tree/disjoint_set.s"
-	@echo "... minimal_spanning_tree/kruskal.o"
-	@echo "... minimal_spanning_tree/kruskal.i"
-	@echo "... minimal_spanning_tree/kruskal.s"
-	@echo "... minimal_spanning_tree/minimal_spanning_tree.o"
-	@echo "... minimal_spanning_tree/minimal_spanning_tree.i"
-	@echo "... minimal_spanning_tree/minimal_spanning_tree.s"
 	@echo "... timer/timer.o"
 	@echo "... timer/timer.i"
 	@echo "... timer/timer.s"

@@ -3,7 +3,8 @@
 #include "generator/generator.h"
 #include "graph/complete_graph.h"
 #include "graph/delaunay_triangulation.h"
-#include "minimal_spanning_tree/kruskal.h"
+#include "graph/kruskal.h"
+#include "graph/construction_strategy.h"
 #include "timer/timer.h"
 
 /**
@@ -12,14 +13,16 @@
  * @param n Number of nodes
  * @param m Number of edges in constraints
  */
-template<typename Construction>
+template<typename ConstructionStrategy>
 void Test(int n, int m) {
   Timer timer;
   timer.start();
-  auto graph = Construction{Generator::GeneratePoints(n)};
+  auto strategy = std::shared_ptr<ConstructionStrategy>{new ConstructionStrategy{}};
+  auto graph = Graph{Generator::GeneratePoints(n), strategy.get()};
+  std::shared_ptr<Kruskal> kruskal = std::make_shared<Kruskal>(Generator::GenerateForest(n, m));
   std::cout << "n = " << n << " m = " << m << '\n';
   std::cout << "Overall Length: " << graph.OverallLength() << '\n';
-  std::cout << "MST Length: " << Kruskal{graph, Generator::GenerateForest(n, m)}.OverallLength() << '\n';
+  std::cout << "MST Length: " << Graph{graph.GetVertices(), kruskal.get()}.OverallLength() << '\n';
   std::cout << "Time: " << timer.time() << "s" << '\n' << std::endl;
 }
 
@@ -29,14 +32,16 @@ void Test(int n, int m) {
  * @param points The given points
  * @param constraints The give edges
  */
-template<typename Construction>
-void Test(const std::vector<UndirectedGraph::Point> &points, const std::vector<UndirectedGraph::Edge> &constraints) {
+template<typename ConstructionStrategy>
+void Test(const std::vector<Graph::Point> &points, const std::vector<Graph::Edge> &constraints) {
   Timer timer;
   timer.start();
-  auto graph = Construction{points};
+  auto strategy = std::shared_ptr<ConstructionStrategy>{new ConstructionStrategy{}};
+  auto graph = Graph{points, strategy.get()};
+  auto kruskal = std::make_shared<Kruskal>(constraints);
   std::cout << "n = " << points.size() << " m = " << constraints.size() << '\n';
   std::cout << "Overall Length: " << graph.OverallLength() << '\n';
-  std::cout << "MST Length: " << Kruskal{graph, constraints}.OverallLength() << '\n';
+  std::cout << "MST Length: " << Graph{graph.GetVertices(), kruskal.get()}.OverallLength() << '\n';
   std::cout << "Time: " << timer.time() << "s" << '\n' << std::endl;
 }
 
@@ -51,10 +56,10 @@ void Help() {
 
 void TestGeneratedTestCases() {
   std::cout << "Complete Graph:\n";
-  Test<CompleteGraph>(1000, 10);
+  Test<CompleteGraph>(10000, 10);
   std::cout << "Delaunay Triangulation:\n";
-  Test<DelaunayTriangulation>(1000, 10);
   Test<DelaunayTriangulation>(10000, 10);
+  Test<DelaunayTriangulation>(100000, 10);
 }
 
 void TestTestCases(const char *file_name) {
@@ -66,14 +71,14 @@ void TestTestCases(const char *file_name) {
   int t = 0;
   while (f_in_test_cases >> n) {
     std::cout << "Test Case #" << ++t << ":\n";
-    std::vector<UndirectedGraph::Point> points;
+    std::vector<Graph::Point> points;
     for (int i = 0; i < n; i++) {
-      UndirectedGraph::Point p;
+      Graph::Point p;
       f_in_test_cases >> p;
       points.push_back(std::move(p));
     }
     f_in_test_cases >> m;
-    std::vector<UndirectedGraph::Edge> edges;
+    std::vector<Graph::Edge> edges;
     for (int i = 0; i < m; i++) {
       int u, v;
       f_in_test_cases >> u >> v;
