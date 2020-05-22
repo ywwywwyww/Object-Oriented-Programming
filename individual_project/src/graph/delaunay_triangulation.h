@@ -12,6 +12,10 @@
 
 class DelaunayTriangulation : public ConstructionStrategy {
  public:
+   /**
+    * Constructs the Delaunay triangulation of the graph
+    * @param graph The graph
+    */
   void Construct(Graph *const &graph) const override;
 };
 

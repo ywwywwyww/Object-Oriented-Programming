@@ -12,6 +12,10 @@
 
 class MinimalSpanningTree : public ConstructionStrategy {
  public:
+  /**
+   * Construct a minimal spanning tree strategy with given constraints
+   * @param constraints The constraint edges
+   */
   explicit MinimalSpanningTree(const std::vector<Graph::Edge> &constraints = std::vector<Graph::Edge>{}) : constraints_{constraints} {}
  protected:
   std::vector<Graph::Edge> constraints_;

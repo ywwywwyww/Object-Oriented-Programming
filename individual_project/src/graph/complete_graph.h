@@ -11,6 +11,10 @@
 
 class CompleteGraph : public ConstructionStrategy {
  public:
+  /**
+   * Construgy a complete graph of the vertices
+   * @param graph The graph
+   */
   void Construct(Graph *const &graph) const override;
 };
 

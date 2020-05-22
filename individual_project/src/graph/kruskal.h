@@ -12,7 +12,10 @@
 class Kruskal : public MinimalSpanningTree {
  public:
   explicit Kruskal(const std::vector<Graph::Edge> &constraints = std::vector<Graph::Edge>{}) : MinimalSpanningTree{constraints} {}
-
+  /**
+   * Construct the graph using kruskal algorithm
+   * @param graph The graph
+   */
   void Construct(Graph *const &graph) const override;
 
 };

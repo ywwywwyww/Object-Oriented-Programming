@@ -24,11 +24,25 @@ class Graph {
   typedef Kernel::Point_2 Point;
   typedef std::pair<int, int> Edge;
 
+  /**
+   * Construct the graph using given vertices and edges
+   * @param vertices The points
+   * @param edges The edges
+   */
   explicit Graph(const std::vector<Point> &vertices, const std::vector<Edge> &edges = std::vector<Edge>{})
       : vertices_{vertices}, edges_{edges} {}
 
+  /**
+   * Construct the graph using data in the input stream
+   * @param in The input stream
+   */
   explicit Graph(std::istream &in);
 
+  /**
+   * Construct this graph using given vertices and strategy
+   * @param vertices The points
+   * @param strategy The construction strategy
+   */
   Graph(const std::vector<Point> &vertices, ConstructionStrategy *const &strategy);
 
   virtual ~Graph() = default;
@@ -70,6 +84,12 @@ class Graph {
   std::vector<Edge> edges_;
 };
 
+/**
+ * Output the whole graph to the output stream
+ * @param out The output stream
+ * @param graph The graph
+ * @return The output stream
+ */
 std::ostream &operator <<(std::ostream &out, const Graph &graph);
 
 #endif //SRC_GRAPH_GRAPH_H_

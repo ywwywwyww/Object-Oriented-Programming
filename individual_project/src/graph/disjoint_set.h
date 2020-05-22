@@ -16,7 +16,17 @@ class DisjointSet {
    * @param n Number of nodes
    */
   explicit DisjointSet(int n);
+  /**
+   * Queries the root of a node
+   * @param x The node
+   * @return The root of x
+   */
   int FindRoot(int x);
+  /**
+   * Unions two nodes
+   * @param x One node
+   * @param y The other node
+   */
   void Union(int x, int y);
  private:
   std::vector<int> father_;

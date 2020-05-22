@@ -13,6 +13,7 @@ void DelaunayTriangulation::Construct(Graph *const &graph) const {
   for (int i = 0; i < graph->GetNumVertices(); i++) {
     point_to_id[graph->GetVertex(i)] = i;
   }
+  // Build Delaunay triangulation
   auto delaunay_triangulation = CGAL::Delaunay_triangulation_2<Graph::Kernel>(graph->GetVertices().begin(), graph->GetVertices().end());
   for (auto edge_iterator = delaunay_triangulation.finite_edges_begin(); edge_iterator != delaunay_triangulation.finite_edges_end(); edge_iterator++) {
     auto segment = delaunay_triangulation.segment(*edge_iterator);

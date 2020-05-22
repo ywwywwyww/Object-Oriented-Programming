@@ -8,8 +8,8 @@
 #include "timer/timer.h"
 
 /**
- * Constructs minimal spanning tree using given construction class and generated points and constraints
- * @tparam Construction The construction class
+ * Constructs minimal spanning tree using given construction strategy class and generated points and constraints
+ * @tparam ConstructionStrategy The construction strategy class
  * @param n Number of nodes
  * @param m Number of edges in constraints
  */
@@ -27,8 +27,8 @@ void Test(int n, int m) {
 }
 
 /**
- * Constructs minimal spanning tree using given construction class, points and constraints
- * @tparam Construction The construction class
+ * Constructs minimal spanning tree using given construction strategy class, points and constraints
+ * @tparam ConstructionStrategy The construction strategy class
  * @param points The given points
  * @param constraints The give edges
  */
@@ -45,6 +45,9 @@ void Test(const std::vector<Graph::Point> &points, const std::vector<Graph::Edge
   std::cout << "Time: " << timer.time() << "s" << '\n' << std::endl;
 }
 
+/**
+ * Displays the help information
+ */
 void Help() {
   std::cerr << "Usage: ./src [option]\n";
   std::cerr << "Options:\n";
@@ -62,10 +65,11 @@ void TestGeneratedTestCases() {
   Test<DelaunayTriangulation>(100000, 10);
 }
 
-void TestTestCases(const char *file_name) {
+void TestInputTestCases(const char *file_name) {
   std::fstream f_in_test_cases(file_name);
   if (!f_in_test_cases) {
-    std::cerr << "Cannot find test cases" << std::endl;
+    std::cerr << "Cannot find the test cases" << std::endl;
+    exit(0);
   }
   int n, m;
   int t = 0;
@@ -111,7 +115,7 @@ int main(int argc, char **argv) {
         if (argc != 3) {
           Help();
         } else {
-          TestTestCases(argv[2]);
+          TestInputTestCases(argv[2]);
         }
         break;
       default:

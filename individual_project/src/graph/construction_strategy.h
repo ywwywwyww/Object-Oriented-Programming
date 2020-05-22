@@ -14,6 +14,10 @@ class Graph;
 class ConstructionStrategy {
  public:
   ConstructionStrategy() = default;
+  /**
+   * Construct the graph using corresponding strategy
+   * @param graph The graph
+   */
   virtual void Construct(Graph *const &graph) const = 0;
 };
 
