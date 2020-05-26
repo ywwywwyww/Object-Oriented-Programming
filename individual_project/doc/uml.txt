@@ -6,33 +6,33 @@ UndirectedGraph: -vector~Edge~ edges_
 UndirectedGraph: +UndirectedGraph(in vertices, in edges)
 UndirectedGraph: +UndirectedGraph(in in)
 UndirectedGraph: +UndirectedGraph(in vertices,in strategy)
-UndirectedGraph: +AddEdge(in edge)
-UndirectedGraph: +AddEdges(in edges)
-UndirectedGraph: +GetNumVertices() int
-UndirectedGraph: +GetNumEdges() int
-UndirectedGraph: +GetVertex(in id) Point
-UndirectedGraph: +GetEdge(in id) Edge
-UndirectedGraph: +GetVertices() vector<Point>
-UndirectedGraph: +GetEdges() vector<Edge>
-UndirectedGraph: +OverallLength() double
-UndirectedGraph: +DisplayVertices(in out)
-UndirectedGraph: +DisplayEdges(in out)
+UndirectedGraph: +AddEdge(in edge)*
+UndirectedGraph: +AddEdges(in edges)*
+UndirectedGraph: +GetNumVertices()* int
+UndirectedGraph: +GetNumEdges()* int
+UndirectedGraph: +GetVertex(in id)* Point
+UndirectedGraph: +GetEdge(in id)* Edge
+UndirectedGraph: +GetVertices()* vector<Point>
+UndirectedGraph: +GetEdges()* vector<Edge>
+UndirectedGraph: +OverallLength()* double
+UndirectedGraph: +DisplayVertices(in out)*
+UndirectedGraph: +DisplayEdges(in out)*
 
 class ConstructionStrategy
 UndirectedGraph -- ConstructionStrategy
 ConstructionStrategy: +Construct(in graph)*
 
 ConstructionStrategy <|.. CompleteGraph
-CompleteGraph: +Construct(in graph)
+CompleteGraph: +Construct(in graph)*
 ConstructionStrategy <|.. DelaunayTriangulation
-DelaunayTriangulation: +Construct(in graph)
+DelaunayTriangulation: +Construct(in graph)*
 
 ConstructionStrategy <|-- MinimalSpanningTree
 MinimalSpanningTree: +MinimalSpanningTree(in constraints)
 MinimalSpanningTree: #constraints_
 MinimalSpanningTree <|.. Kruskal
 Kruskal: +Kruskal(in constraints)
-Kruskal: +Construct(in graph)
+Kruskal: +Construct(in graph)*
 
 class DisjointSet
 DisjointSet: -vector<int> father_
