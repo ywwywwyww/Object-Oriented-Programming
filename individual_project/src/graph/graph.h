@@ -79,7 +79,7 @@ class Graph {
 
   virtual void DisplayEdges(std::ostream &out) const;
 
- private:
+ protected:
   std::vector<Point> vertices_;
   std::vector<Edge> edges_;
 };
