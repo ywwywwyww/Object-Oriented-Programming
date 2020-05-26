@@ -88,6 +88,12 @@
 		<Unit filename="/home/yww/OOP/individual_project/src/graph/complete_graph.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/construction_strategy.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/construction_strategy.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/home/yww/OOP/individual_project/src/graph/delaunay_triangulation.cpp">
 			<Option target="src"/>
 		</Unit>
@@ -100,10 +106,10 @@
 		<Unit filename="/home/yww/OOP/individual_project/src/graph/disjoint_set.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph_adapter.cpp">
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph.cpp">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph_adapter.h">
+		<Unit filename="/home/yww/OOP/individual_project/src/graph/graph.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/yww/OOP/individual_project/src/graph/kruskal.cpp">
@@ -116,12 +122,6 @@
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/yww/OOP/individual_project/src/graph/minimal_spanning_tree.h">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/individual_project/src/graph/undirected_graph.cpp">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="/home/yww/OOP/individual_project/src/graph/undirected_graph.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/yww/OOP/individual_project/src/main.cpp">

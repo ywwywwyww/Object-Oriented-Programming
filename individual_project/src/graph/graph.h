@@ -47,25 +47,25 @@ class Graph {
 
   virtual ~Graph() = default;
 
-  void AddEdge(const Edge &edge);
-  void AddEdges(const std::vector<Edge> &edges);
+  virtual void AddEdge(const Edge &edge);
+  virtual void AddEdges(const std::vector<Edge> &edges);
 
-  int GetNumVertices() const {
+  virtual int GetNumVertices() const {
     return this->vertices_.size();
   }
-  int GetNumEdges() const {
+  virtual int GetNumEdges() const {
     return this->edges_.size();
   }
-  Point GetVertex(int id) const {
+  virtual Point GetVertex(int id) const {
     return this->vertices_[id];
   }
-  Edge GetEdge(int id) const {
+  virtual Edge GetEdge(int id) const {
     return this->edges_[id];
   }
-  const std::vector<Point> &GetVertices() const {
+  virtual const std::vector<Point> &GetVertices() const {
     return this->vertices_;
   }
-  const std::vector<Edge> &GetEdges() const {
+  virtual const std::vector<Edge> &GetEdges() const {
     return this->edges_;
   }
 
@@ -73,11 +73,11 @@ class Graph {
    * Calculate the overall length, that is, the total length of all edges of the graph
    * @return The overall length
    */
-  double OverallLength() const;
+  virtual double OverallLength() const;
 
-  void DisplayVertices(std::ostream &out) const;
+  virtual void DisplayVertices(std::ostream &out) const;
 
-  void DisplayEdges(std::ostream &out) const;
+  virtual void DisplayEdges(std::ostream &out) const;
 
  private:
   std::vector<Point> vertices_;
